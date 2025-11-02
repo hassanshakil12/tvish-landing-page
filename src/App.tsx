@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import {
   HeroSection,
   About,
@@ -8,11 +8,21 @@ import {
   Signup,
   Footer,
 } from "./sections";
+import { ScrollToTopButton } from "./components";
 
 const App = () => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <div className="w-full h-full bg-black">
+        <ScrollToTopButton />
         <HeroSection />
         <About />
         <LeadCapture />

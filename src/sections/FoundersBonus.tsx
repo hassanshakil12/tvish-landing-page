@@ -150,7 +150,7 @@ const FoundersBonus = () => {
           {/* CTA Section */}
           <div className="text-center">
             <div className="mb-8">
-              <Button name="Claim My Founder's Bonus Now" />
+              <Button name="Claim Your Founder's Bonus Now" />
             </div>
 
             {/* Urgency Element */}

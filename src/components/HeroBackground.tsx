@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./";
 
 const HeroBackground = () => {
@@ -116,7 +115,7 @@ const HeroBackground = () => {
         </div>
 
         {/* Gradient Overlay with Content */}
-        <div className="absolute bottom-0 left-0 w-full h-[80vh] bg-gradient-to-t from-black via-black/70 to-transparent flex justify-center items-center">
+        <div className="absolute bottom-0 left-0 w-full h-[80vh] bg-linear-to-t from-black via-black/70 to-transparent flex justify-center items-center">
           <div className="text-center px-4 w-full max-w-6xl mx-auto">
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 sm:mb-5 md:mb-6 text-white tracking-tight drop-shadow-[0_4px_20px_rgba(255,0,0,0.7)] leading-tight">
               TV-ish: Where Stories Take Center Stage
@@ -125,7 +124,7 @@ const HeroBackground = () => {
               Stream bold. Share loud. Be seen
             </p>
             <div className="transform scale-75 xs:scale-90 sm:scale-100">
-              <Button name="Join The Waitlist" />
+              <Button name="Join The Waitlist Now" />
             </div>
           </div>
         </div>
