@@ -1,9 +1,7 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <>
-      <div className="w-full bg-gradient-to-br from-black via-black to-red-950 px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="w-full bg-linear-to-br from-black via-black to-red-950 px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="w-full max-w-[80vw] mx-auto">
           {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-12 lg:mb-16">
@@ -61,7 +59,7 @@ const Footer = () => {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="bg-gradient-to-br from-black/50 to-black/30 border border-white/5 rounded-xl p-4 text-center group hover:border-red-500/20 transition-all duration-300"
+                    className="bg-linear-to-br from-black/50 to-black/30 border border-white/5 rounded-xl p-4 text-center group hover:border-red-500/20 transition-all duration-300"
                   >
                     <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">
                       {item.icon}
@@ -84,7 +82,7 @@ const Footer = () => {
               </div>
 
               {/* No-Spam Policy */}
-              <div className="bg-gradient-to-r from-red-900/20 to-red-800/10 border-2 border-red-600/20 rounded-2xl p-6 lg:p-8">
+              <div className="bg-linear-to-r from-red-900/20 to-red-800/10 border-2 border-red-600/20 rounded-2xl p-6 lg:p-8">
                 <div className="flex items-center justify-center mb-4">
                   <div className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide">
                     NO-SPAM POLICY

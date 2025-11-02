@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../components";
 
 const FoundersBonus = () => {
@@ -14,7 +13,7 @@ const FoundersBonus = () => {
             </h1>
           </div>
           <div className="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
-          <p className="text-2xl sm:text-3xl lg:text-4xl text-red-200 mt-8 font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+          <p className="text-2xl sm:text-3xl lg:text-4xl text-red-200 mt-8 font-bold bg-linear-to-r from-red-400 to-red-600 bg-clip-text">
             Unlock the Exclusive Founder's Package
           </p>
         </div>
@@ -23,8 +22,8 @@ const FoundersBonus = () => {
         <div className="w-full max-w-[80vw] mx-auto">
           {/* Limited Time Banner */}
           <div className="relative mb-12 lg:mb-16">
-            <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-red-800/10 rounded-2xl blur-lg"></div>
-            <div className="relative bg-gradient-to-r from-red-900/30 to-red-800/20 border-2 border-red-600/30 rounded-2xl p-8 shadow-2xl">
+            <div className="absolute inset-0 bg-linear-to-r from-red-900/20 to-red-800/10 rounded-2xl blur-lg"></div>
+            <div className="relative bg-linear-to-r from-red-900/30 to-red-800/20 border-2 border-red-600/30 rounded-2xl p-8 shadow-2xl">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="flex-1 text-center sm:text-left">
                   <div className="inline-flex items-center px-4 py-2 bg-red-600 rounded-full mb-4">
@@ -44,7 +43,7 @@ const FoundersBonus = () => {
                     to secure your exclusive perks
                   </p>
                 </div>
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="bg-black/50 border-2 border-red-500/50 rounded-xl p-4 text-center">
                     <div className="text-2xl font-bold text-white">🎁</div>
                     <div className="text-red-300 font-semibold text-sm mt-1">
@@ -96,11 +95,11 @@ const FoundersBonus = () => {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="group relative bg-gradient-to-br from-black/50 to-black/30 border border-white/10 rounded-2xl p-6 hover:border-red-500/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+                  className="group relative bg-linear-to-br from-black/50 to-black/30 border border-white/10 rounded-2xl p-6 hover:border-red-500/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
                 >
                   {/* Background Glow */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}
+                    className={`absolute inset-0 bg-linear-to-br ${feature.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}
                   ></div>
 
                   <div className="flex items-start space-x-4">
@@ -122,7 +121,7 @@ const FoundersBonus = () => {
           </div>
 
           {/* Value Proposition */}
-          <div className="bg-gradient-to-r from-black via-red-950/20 to-black border-l-4 border-red-600 rounded-r-2xl p-8 mb-12">
+          <div className="bg-linear-to-r from-black via-red-950/20 to-black border-l-4 border-red-600 rounded-r-2xl p-8 mb-12">
             <div className="max-w-3xl mx-auto text-center">
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
                 Why This Matters for Creators
@@ -165,7 +164,7 @@ const FoundersBonus = () => {
 
         {/* Bottom Decoration */}
         <div className="w-full flex justify-center mt-20 lg:mt-28">
-          <div className="w-32 h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
+          <div className="w-32 h-1 bg-linear-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
         </div>
       </div>
     </>

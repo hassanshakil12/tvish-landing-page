@@ -1,10 +1,9 @@
-import React from "react";
 import { ButtonAlt } from "../components";
 
 const LeadCapture = () => {
   return (
     <>
-      <div className="w-full min-h-screen bg-gradient-to-tr from-black via-black to-red-950 px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="w-full min-h-screen bg-linear-to-tr from-black via-black to-red-950 px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         {/* Header Section */}
         <div className="w-full text-center mb-12 lg:mb-20">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
@@ -72,7 +71,7 @@ const LeadCapture = () => {
 
         {/* Bottom Decoration */}
         <div className="w-full flex justify-center mt-16 lg:mt-24">
-          <div className="w-32 h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
+          <div className="w-32 h-1 bg-linear-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
         </div>
       </div>
     </>

@@ -1,10 +1,9 @@
-import React from "react";
 import { ButtonAlt } from "../components";
 
 const WhyJoinNow = () => {
   return (
     <>
-      <div className="w-full bg-gradient-to-bl from-black via-black to-red-950 min-h-screen bg-black px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="w-full bg-linear-to-bl from-black via-black to-red-950 min-h-screen bg-black px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         {/* Header Section */}
         <div className="w-full text-center mb-16 lg:mb-24">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
@@ -57,10 +56,10 @@ const WhyJoinNow = () => {
             ].map((benefit, index) => (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-black/50 to-black/30 border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+                className="group relative bg-linear-to-br from-black/50 to-black/30 border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
               >
                 {/* Background Glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-red-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-red-500/5 to-red-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
 
                 {/* Icon */}
                 <div className="text-4xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
@@ -93,8 +92,8 @@ const WhyJoinNow = () => {
 
           {/* Value Reinforcer */}
           <div className="relative mb-16 lg:mb-20">
-            <div className="absolute inset-0 bg-gradient-to-r from-red-900/10 to-red-800/5 rounded-2xl blur-lg"></div>
-            <div className="relative bg-gradient-to-r from-red-900/20 to-red-800/10 border-2 border-red-600/20 rounded-2xl p-8 lg:p-12 text-center">
+            <div className="absolute inset-0 bg-linear-to-r from-red-900/10 to-red-800/5 rounded-2xl blur-lg"></div>
+            <div className="relative bg-linear-to-r from-red-900/20 to-red-800/10 border-2 border-red-600/20 rounded-2xl p-8 lg:p-12 text-center">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
                   Join a Growing Community of Visionaries
@@ -151,7 +150,7 @@ const WhyJoinNow = () => {
 
         {/* Bottom Decoration */}
         <div className="w-full flex justify-center mt-20 lg:mt-28">
-          <div className="w-32 h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
+          <div className="w-32 h-1 bg-linear-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
         </div>
       </div>
     </>
