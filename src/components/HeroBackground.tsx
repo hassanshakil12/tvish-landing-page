@@ -125,9 +125,9 @@ const HeroBackground = () => {
         <div className="text-center px-4 w-full max-w-6xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-5 md:mb-6 text-white tracking-tight leading-tight">
-            The <span className="text-red-600 italic">Revolution</span> in Streaming
-            <br className="hidden sm:block" />
-            is Coming.
+            The <span className="text-red-600 italic">Revolution</span> in
+            Streaming
+            <br className="hidden sm:block" /> is Coming.
           </h1>
 
           {/* Sub Headline */}
