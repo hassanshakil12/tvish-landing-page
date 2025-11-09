@@ -1,173 +1,225 @@
-import { Button } from "../components";
-
 const FoundersBonus = () => {
-  return (
-    <>
-      <div className="w-full min-h-screen bg-black px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-        {/* Header Section */}
-        <div className="w-full text-center mb-16 lg:mb-24">
-          <div className="relative inline-block">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
-              Sign Up Before{" "}
-              <span className="text-red-600 relative">December 10, 2025</span>
-            </h1>
-          </div>
-          <div className="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
-          <p className="text-2xl sm:text-3xl lg:text-4xl text-red-200 mt-8 font-bold bg-linear-to-r from-red-400 to-red-600 bg-clip-text">
-            Unlock the Exclusive Founder's Package
-          </p>
-        </div>
+  const packages = [
+    {
+      tier: "🥉 Bronze Founder",
+      subtitle: "The Early Adopter",
+      limit: "(For the first 1,000 creators)",
+      perfectFor:
+        "Independent filmmakers, vloggers, musicians, or podcasters just starting to monetize.",
+      includes: [
+        "Founders Badge on your profile & videos",
+        "90 days with 0% platform fees (keep 100% of revenue)",
+        "Priority listing in the 'New Creator' section on launch week",
+        "Access to advanced analytics dashboard (early beta)",
+        "Invitation to the private TV-ish Creator Discord",
+        "Name featured on the official 'Founders Wall' landing page",
+      ],
+      value: "~$300",
+      requirements: "Free with early signup",
+      gradient: "from-yellow-600/20 to-yellow-800/10",
+      border: "border-yellow-600/40",
+      badge: "🥉 BRONZE",
+    },
+    {
+      tier: "🥈 Silver Founder",
+      subtitle: "The Builder",
+      limit: "(For top 500 verified creators)",
+      perfectFor:
+        "Mid-level creators, filmmakers, or influencers ready to grow their audience and income.",
+      includes: [
+        "180 days 0% platform fees",
+        "Lifetime 90/10 revenue split (vs. standard 80/20 after year 1)",
+        "Free onboarding audit by FRBstudios team – includes content feedback + monetization setup guidance",
+        "$100 TV-ish ad credit for promoting your channel or videos",
+        "Exclusive referral code (earn 5% from referrals for 1 year)",
+        "Invite to Founders Launch Event (virtual or in-person)",
+      ],
+      requirements:
+        "Free for early creators who upload 3+ videos before launch",
+      value: "~$750",
+      gradient: "from-gray-400/20 to-gray-600/10",
+      border: "border-gray-500/40",
+      badge: "🥈 SILVER",
+    },
+    {
+      tier: "🥇 Gold Founder",
+      subtitle: "The Visionary",
+      limit: "(Invite-Only: 100 creators maximum)",
+      perfectFor:
+        "Established creators, production teams, or media entrepreneurs who want to help shape TV-ish's creator economy.",
+      includes: [
+        "Lifetime Founder Status + Lifetime 90/10 revenue split",
+        "Dedicated Partner Manager for brand deals & collaboration opportunities",
+        "Free feature in the 'Founder Spotlight' series",
+        "Co-creator opportunities – early access to beta tools, new features, and creator investment options",
+        "Exclusive NFT Founder Certificate verifying your role as a platform pioneer",
+        "Access to private 'Founders Summit' (annual retreat)",
+        "Complimentary TV-ish Merchandise Kit",
+      ],
+      value: "$2,000+",
+      requirements: "Limited to top creators chosen by the TV-ish team",
+      gradient: "from-yellow-500/20 to-yellow-700/10",
+      border: "border-yellow-500/40",
+      badge: "🥇 GOLD",
+    },
+  ];
 
-        {/* Main Content */}
-        <div className="w-full max-w-[80vw] mx-auto">
-          {/* Limited Time Banner */}
-          <div className="relative mb-12 lg:mb-16">
-            <div className="absolute inset-0 bg-linear-to-r from-red-900/20 to-red-800/10 rounded-2xl blur-lg"></div>
-            <div className="relative bg-linear-to-r from-red-900/30 to-red-800/20 border-2 border-red-600/30 rounded-2xl p-8 shadow-2xl">
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-                <div className="flex-1 text-center sm:text-left">
-                  <div className="inline-flex items-center px-4 py-2 bg-red-600 rounded-full mb-4">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse mr-2"></div>
-                    <span className="text-white text-sm font-bold tracking-wider">
-                      LIMITED TIME OFFER
-                    </span>
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2">
-                    ⚡ Founder's Bonus Ends Soon
-                  </h2>
-                  <p className="text-lg text-red-200">
-                    Join before{" "}
-                    <span className="text-white font-semibold">
-                      December 10, 2025
-                    </span>{" "}
-                    to secure your exclusive perks
-                  </p>
+  const addOns = [
+    "📈 Referral Rewards: Every referred verified creator earns you 10 TV-ish points = $10 ad credit",
+    "🎫 Early Access to Creator Marketplace: Test & sell exclusive content, workshops, and digital products",
+    "💡 Beta Tester Role: Help shape future features & earn rewards for bug reports or feedback",
+  ];
+
+  return (
+    <div className="w-full min-h-fit bg-linear-to-tl from-black via-black to-red-950/50 px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      {/* Header Section */}
+      <div className="w-full text-center mb-16 lg:mb-10">
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
+          TV-ish <span className="text-red-600 italic">Founder</span> Packages
+        </h1>
+        <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-10"></div>
+      </div>
+
+      {/* Founder Packages Grid */}
+      <div className="w-full max-w-7xl mx-auto mb-16 lg:mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6">
+          {packages.map((pkg, index) => (
+            <div
+              key={index}
+              className={`group relative bg-linear-to-br from-black/60 to-black/40 border-2 rounded-3xl p-8 hover:border-red-600/50 transition-all duration-500 cursor-pointer hover:scale-105 border-red-900/30`}
+            >
+              {/* Package Badge */}
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center space-x-2 bg-red-900/30 border border-red-600/40 rounded-full px-4 py-2 mb-4">
+                  <span className="text-lg">{pkg.badge.split(" ")[0]}</span>
+                  <span className="text-red-200 text-sm font-bold tracking-widest">
+                    {pkg.badge.split(" ")[1]}
+                  </span>
                 </div>
-                <div className="shrink-0">
-                  <div className="bg-black/50 border-2 border-red-500/50 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-white">🎁</div>
-                    <div className="text-red-300 font-semibold text-sm mt-1">
-                      FOUNDER'S PACKAGE
-                    </div>
-                  </div>
+
+                <h2 className="text-2xl lg:text-4xl font-bold text-white mb-2">
+                  {pkg.tier}
+                </h2>
+                <p className="text-2xl text-red-400 font-semibold mb-2">
+                  {pkg.subtitle}
+                </p>
+                <p className="text-sm text-gray-400 mb-4">{pkg.limit}</p>
+              </div>
+
+              {/* Perfect For */}
+              <div className="bg-red-900/30 border-l-4 border-red-600 pl-6 rounded-r-lg p-2 mb-6">
+                <p className="text-white text-sm font-bold text-left">
+                  "Perfect for: {pkg.perfectFor}"
+                </p>
+              </div>
+
+              {/* Includes */}
+              <div className="space-y-4 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  Includes:
+                </h3>
+                <ul className="space-y-3">
+                  {pkg.includes.map((item, itemIndex) => (
+                    <li
+                      key={itemIndex}
+                      className="flex items-start space-x-3 text-gray-300 text-sm lg:text-base"
+                    >
+                      <span className="text-red-400 mt-0.5 shrink-0">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Value & Requirements */}
+              <div className="border-t border-red-900/30 pt-6 space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-400 font-semibold">Value:</span>
+                  <span className="text-white font-bold text-5xl">
+                    {pkg.value}
+                  </span>
+                </div>
+                <div className="bg-red-600/20 rounded-lg p-3 border border-red-900/20 mt-8">
+                  <p className="text-red-300 text-sm text-center font-semibold">
+                    {pkg.requirements}
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
+      </div>
 
-          {/* Perks Grid */}
-          <div className="mb-12 lg:mb-16">
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-12">
-              Your <span className="text-red-600">Founder's Package</span>{" "}
-              Includes:
-            </h3>
+      {/* Optional Add-Ons */}
+      <div className="w-full max-w-7xl mx-auto mb-16 lg:mb-20">
+        <div className="relative group">
+          {/* Animated Background Glow */}
+          <div className="absolute -inset-4 bg-linear-to-r from-red-600/20 to-red-400/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  icon: "🎁",
-                  title: "Creator Launch Toolkit",
-                  description:
-                    "Professional pitch deck, production checklist, and social media promo templates",
-                  gradient: "from-red-500/10 to-red-600/10",
-                },
-                {
-                  icon: "⭐",
-                  title: "Featured Creator Spotlight",
-                  description:
-                    "Prime platform placement during our official launch period",
-                  gradient: "from-orange-500/10 to-red-500/10",
-                },
-                {
-                  icon: "📰",
-                  title: "Showcase Newsletter Feature",
-                  description:
-                    "Spotlight in our inaugural Creator Spotlight edition",
-                  gradient: "from-purple-500/10 to-red-500/10",
-                },
-                {
-                  icon: "🚀",
-                  title: "Early Access Priority",
-                  description:
-                    "First access to new features and submission opportunities",
-                  gradient: "from-blue-500/10 to-red-500/10",
-                },
-              ].map((feature, index) => (
+          {/* Main Container */}
+          <div className="relative bg-linear-to-br from-black/80 to-red-950/30 border-2 border-red-900/30 rounded-3xl p-8 lg:p-10 backdrop-blur-sm overflow-hidden">
+            {/* Floating Particles */}
+            <div className="absolute top-4 right-6 w-3 h-3 bg-red-500 rounded-full opacity-60 animate-ping"></div>
+            <div className="absolute bottom-8 left-8 w-2 h-2 bg-red-400 rounded-full opacity-40 animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-10 w-1 h-1 bg-red-300 rounded-full opacity-30 animate-bounce delay-500"></div>
+
+            {/* Header Section */}
+            <div className="text-center mb-5 relative z-10">
+              <div className="inline-flex items-center space-x-3 bg-linear-to-r from-red-600 to-red-600 rounded-full px-6 py-3 mb-6 shadow-lg">
+                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <span className="text-white text-sm font-bold tracking-widest">
+                  OPTIONAL ADD-ONs FOR ALL TIERS
+                </span>
+              </div>
+            </div>
+
+            {/* Enhanced Add-Ons Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 relative z-10">
+              {addOns.map((addOn, index) => (
                 <div
                   key={index}
-                  className="group relative bg-linear-to-br from-black/50 to-black/30 border border-white/10 rounded-2xl p-6 hover:border-red-500/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+                  className="group/card relative bg-linear-to-br from-black/60 to-red-950/20 border-2 border-red-900/40 rounded-2xl p-6 lg:p-7 hover:border-red-500/60 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer overflow-hidden"
                 >
-                  {/* Background Glow */}
-                  <div
-                    className={`absolute inset-0 bg-linear-to-br ${feature.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}
-                  ></div>
+                  {/* Card Background Effects */}
+                  <div className="absolute inset-0 bg-linear-to-br from-red-600/5 to-red-400/3 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-xl font-bold text-white mb-3">
-                        {feature.title}
-                      </h4>
-                      <p className="text-gray-300 text-lg leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
+                  {/* Animated Corner Accents */}
+                  <div className="absolute top-3 left-3 w-3 h-3">
+                    <div className="w-full h-full border-t-2 border-l-2 border-red-500 rounded-tl-lg opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
                   </div>
+                  <div className="absolute bottom-3 right-3 w-3 h-3">
+                    <div className="w-full h-full border-b-2 border-r-2 border-red-500 rounded-br-lg opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 delay-150"></div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative z-10">
+                    {/* Icon Header */}
+                    <div className="text-center mb-4">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-red-600/20 rounded-xl mb-3 group-hover/card:scale-110 transition-transform duration-300">
+                        <span className="text-xl">{addOn.split(" ")[0]}</span>
+                      </div>
+                    </div>
+
+                    {/* Text Content */}
+                    <p className="text-gray-300 text-sm lg:text-base leading-relaxed text-center group-hover/card:text-white transition-colors duration-300 font-medium">
+                      {addOn}
+                    </p>
+                  </div>
+
+                  {/* Hover Shine Effect */}
+                  <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover/card:translate-x-full transition-transform duration-1000"></div>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Value Proposition */}
-          <div className="bg-linear-to-r from-black via-red-950/20 to-black border-l-4 border-red-600 rounded-r-2xl p-8 mb-12">
-            <div className="max-w-3xl mx-auto text-center">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
-                Why This Matters for Creators
-              </h3>
-              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-                The Founder's Package isn't just about early access—it's about
-                establishing your presence from day one in a platform built
-                specifically for creative independence and direct audience
-                connection.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-red-300 font-semibold">
-                <span className="bg-red-900/30 px-4 py-2 rounded-lg">
-                  🚀 Launch Advantage
-                </span>
-                <span className="bg-red-900/30 px-4 py-2 rounded-lg">
-                  ⭐ Premium Visibility
-                </span>
-                <span className="bg-red-900/30 px-4 py-2 rounded-lg">
-                  💎 Exclusive Resources
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center">
-            <div className="mb-8">
-              <Button name="Claim Your Founder's Bonus Now" />
-            </div>
-
-            {/* Urgency Element */}
-            <div className="inline-flex items-center space-x-4 bg-red-900/20 border border-red-600/30 rounded-xl px-6 py-3">
-              <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-              <p className="text-red-200 font-medium text-lg">
-                ⏰ Offer expires December 10, 2025 - Don't miss out!
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Decoration */}
-        <div className="w-full flex justify-center mt-20 lg:mt-28">
-          <div className="w-32 h-1 bg-linear-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
         </div>
       </div>
-    </>
+
+      {/* Bottom Decoration */}
+      <div className="w-full flex justify-center mt-16 lg:mt-24">
+        <div className="w-32 h-1 bg-linear-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
+      </div>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <div className="w-full bg-linear-to-br from-black via-black to-red-950 px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="w-full bg-linear-to-tr from-black via-black to-red-950/50 px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="w-full max-w-[80vw] mx-auto">
           {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-12 lg:mb-16">
@@ -9,25 +9,25 @@ const Footer = () => {
             <div className="space-y-6">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white">
-                  Our <span className="text-red-600">Philosophy</span>
+                <h3 className="text-5xl font-bold text-white">
+                  Our <span className="text-red-600 italic">Philosophy</span>
                 </h3>
               </div>
 
               <div className="bg-black/40 border-l-4 border-red-600 rounded-r-xl p-6">
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4">
                   TV-ish is built on{" "}
-                  <span className="text-white font-semibold">
+                  <span className="text-white font-bold italic">
                     creative freedom, empowerment, excellence,
                   </span>{" "}
                   and{" "}
-                  <span className="text-white font-semibold">
+                  <span className="text-white font-bold italic">
                     diversity of thought.
                   </span>
                 </p>
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                   We believe in stories that{" "}
-                  <span className="text-red-600">
+                  <span className="text-red-600 font-bold italic">
                     inspire, connect, and create change.
                   </span>
                 </p>
@@ -76,8 +76,8 @@ const Footer = () => {
             <div className="space-y-6">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-3 h-3 bg-red-600 rounded-full"></div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white">
-                  Our <span className="text-red-600">Promise</span>
+                <h3 className="text-5xl font-bold text-white">
+                  Our <span className="text-red-600 italic">Promise</span>
                 </h3>
               </div>
 
@@ -89,10 +89,10 @@ const Footer = () => {
                   </div>
                 </div>
                 <p className="text-2xl sm:text-3xl text-white font-bold text-center mb-4">
-                  🤝 Just Value, No Noise
+                  Just Value, No Noise
                 </p>
                 <p className="text-lg text-gray-300 text-center leading-relaxed">
-                  <span className="text-red-600 font-semibold">
+                  <span className="text-red-600 font-bold italic">
                     No spam. No fluff.
                   </span>{" "}
                   Just meaningful updates about opportunities that matter to

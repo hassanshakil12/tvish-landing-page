@@ -21,13 +21,13 @@ const App = () => {
 
   return (
     <>
-      <div className="w-full h-full bg-black">
+      <div className="w-full h-full bg-black selection:bg-red-600/30">
         <ScrollToTopButton />
         <HeroSection />
         <About />
         <LeadCapture />
-        <FoundersBonus />
         <WhyJoinNow />
+        <FoundersBonus />
         <Signup />
         <Footer />
       </div>
