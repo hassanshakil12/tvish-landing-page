@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Signup = () => {
+const FFOUNDESignup = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
@@ -292,7 +292,7 @@ const Signup = () => {
                   <div className="inline-flex items-center space-x-3 bg-linear-to-r from-red-600 to-red-600 rounded-full px-6 py-3 mb-6 shadow-lg">
                     <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                     <span className="text-white text-sm font-bold tracking-widest">
-                      ENTER EMAIL TO — LOCK YOUR FOUNDE SPOT
+                      ENTER EMAIL TO — LOCK YOUR FOUNDERS SPOT
                     </span>
                   </div>
                 </div>
