@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const FFOUNDESignup = () => {
+const Signup = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
