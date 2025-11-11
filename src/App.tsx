@@ -8,7 +8,7 @@ import {
   Signup,
   Footer,
 } from "./sections";
-import { ScrollToTopButton } from "./components";
+import { ScrollToTopButton, ActionButton } from "./components";
 
 const App = () => {
   useEffect(() => {
@@ -23,6 +23,7 @@ const App = () => {
     <>
       <div className="w-full h-full bg-black selection:bg-red-600/30">
         <ScrollToTopButton />
+        <ActionButton name="Sign up now" />
         <HeroSection />
         <About />
         <LeadCapture />
