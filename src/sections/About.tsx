@@ -23,12 +23,23 @@ const About = () => {
       {/* Header Section */}
       <div className="w-full text-center mb-16 lg:mb-10">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
-          What Makes TV-ish{" "}
+          What Makes{" "}
+          <img
+            src="/img/logo.png"
+            alt="TV-ish"
+            className="inline-block h-[1.5em] align-middle mx-1 lg:-mt-10.75 md:-mt-7 sm:-mt-7 -mt-6 lg:-mr-5 md:-mr-3 sm:-mr-2 -mr-1 lg:-ml-6 md:-ml-4 sm:-ml-3 -ml-2"
+          />{" "}
           <span className="text-red-600 italic">Different?</span>
         </h1>
         <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-10"></div>
         <p className="text-2xl sm:text-3xl lg:text-4xl text-red-200 font-bold leading-relaxed from-red-400 to-red-600 bg-clip-text italic">
-          "We built TV-ish for creators — Not corporations."
+          "We built{" "}
+          <img
+            src="/img/logo.png"
+            alt="TV-ish"
+            className="inline-block h-[1.5em] align-middle mx-1 lg:-mt-5 md:-mt-4 sm:-mt-4.5 -mt-3.5 lg:-mr-2 md:-mr-1 sm:-mr-1 -mr-0.5 lg:-ml-3 md:-ml-2 sm:-ml-2 -ml-1"
+          />{" "}
+          for creators — Not corporations."
         </p>
       </div>
 

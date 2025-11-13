@@ -23,7 +23,7 @@ const LeadCapture = () => {
               <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed">
                 Join the Founders Program and lock in{" "}
                 <span className="text-white font-bold italic">
-                  lifetime perks
+                  1 year perks
                 </span>
                 , exclusive exposure, and{" "}
                 <span className="text-red-600 font-bold italic">

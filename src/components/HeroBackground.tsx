@@ -137,9 +137,13 @@ const HeroBackground = () => {
           </blockquote>
 
           {/* Description */}
-          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto ">
-            <span className="text-red-600 font-bold italic">TV-ish</span> is the
-            new home for creators who want{" "}
+          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto">
+            <img
+              src="/img/logo.png"
+              alt="TV-ish"
+              className="inline-block h-[2.5em] align-middle mx-1 lg:-mt-9 md:-mt-7 sm:-mt-7 -mt-6 -mr-2"
+            />{" "}
+            is the new home for creators who want{" "}
             <span className="text-white font-bold italic">
               freedom, fairness, and control.
             </span>{" "}

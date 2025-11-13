@@ -16,7 +16,12 @@ const Footer = () => {
 
               <div className="bg-black/40 border-l-4 border-red-600 rounded-r-xl p-6">
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4">
-                  TV-ish is built on{" "}
+                  <img
+                    src="/img/logo.png"
+                    alt="TV-ish"
+                    className="inline-block h-[1.8em] align-middle mx-1 lg:-mt-4 md:-mt-4 sm:-mt-4 -mt-3.5 -mr-1.25 lg:-ml-3 md:-ml-2.5 sm:-ml-2 -ml-1.5"
+                  />{" "}
+                  is built on{" "}
                   <span className="text-white font-bold italic">
                     creative freedom, empowerment, excellence,
                   </span>{" "}
@@ -135,7 +140,11 @@ const Footer = () => {
               {/* Brand */}
               <div className="text-center lg:text-left">
                 <h4 className="text-2xl font-bold text-white mb-2">
-                  TV-<span className="text-red-600">ish</span>
+                  <img
+                    src="/img/logo.png"
+                    alt="TV-ish"
+                    className="inline-block h-[3em] align-middle mx-1 lg:-ml-2 -ml-0.5"
+                  />{" "}
                 </h4>
                 <p className="text-gray-400 text-sm">
                   Stream bold. Share loud. Be seen

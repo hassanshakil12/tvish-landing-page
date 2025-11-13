@@ -8,7 +8,7 @@ const WhyJoinNow = () => {
     },
     {
       icon: "💰",
-      title: "Lifetime 90/10 Revenue Split",
+      title: "1 year 90/10 Revenue Split",
       description:
         "Keep 90% of your earnings forever as a Silver & Gold founder",
     },

@@ -28,7 +28,7 @@ const FoundersBonus = () => {
         "Mid-level creators, filmmakers, or influencers ready to grow their audience and income.",
       includes: [
         "180 days 0% platform fees",
-        "Lifetime 90/10 revenue split (vs. standard 80/20 after year 1)",
+        "1 year 90/10 revenue split (vs. standard 80/20 after year 1)",
         "Free onboarding audit by FRBstudios team – includes content feedback + monetization setup guidance",
         "$100 TV-ish ad credit for promoting your channel or videos",
         "Exclusive referral code (earn 5% from referrals for 1 year)",
@@ -48,7 +48,7 @@ const FoundersBonus = () => {
       perfectFor:
         "Established creators, production teams, or media entrepreneurs who want to help shape TV-ish's creator economy.",
       includes: [
-        "Lifetime Founder Status + Lifetime 90/10 revenue split",
+        "1 year Founder Status + 1 year 90/10 revenue split",
         "Dedicated Partner Manager for brand deals & collaboration opportunities",
         "Free feature in the 'Founder Spotlight' series",
         "Co-creator opportunities – early access to beta tools, new features, and creator investment options",
@@ -75,7 +75,12 @@ const FoundersBonus = () => {
       {/* Header Section */}
       <div className="w-full text-center mb-16 lg:mb-10">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
-          TV-ish <span className="text-red-600 italic">Founder</span> Packages
+          <img
+            src="/img/logo.png"
+            alt="TV-ish"
+            className="inline-block h-[1.5em] align-middle mx-1 lg:-mt-10.75 md:-mt-7 sm:-mt-7 -mt-6 lg:-mr-5 md:-mr-3 sm:-mr-2 -mr-1 lg:-ml-6 md:-ml-4 sm:-ml-3 -ml-2"
+          />{" "}
+          <span className="text-red-600 italic">Founder</span> Packages
         </h1>
         <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-10"></div>
       </div>
