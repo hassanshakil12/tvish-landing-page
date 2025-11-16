@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <>
-      <div className="w-full h-full bg-black selection:bg-red-600/30">
+      <div className="w-full h-full bg-black selection:bg-blue-600/30">
         <ScrollToTopButton />
         <ActionButton name="Sign up now" />
         <HeroSection />

@@ -52,15 +52,15 @@ const Signup = () => {
   return (
     <div
       id="signup"
-      className="w-full min-h-fit bg-linear-to-br from-black via-black to-red-950/50 px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative overflow-hidden"
+      className="w-full min-h-fit bg-linear-to-br from-black via-black to-blue-950/50 px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative overflow-hidden"
     >
       {/* Header Section */}
       <div className="w-full text-center mb-16 lg:mb-10">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
-          Launch Day is <span className="text-red-600 italic">Coming</span>
+          Launch Day is <span className="text-blue-600 italic">Coming</span>
         </h1>
-        <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-10"></div>
-        <p className="text-2xl sm:text-3xl lg:text-4xl text-red-200 font-bold leading-relaxed from-red-400 to-red-600 bg-clip-text italic">
+        <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-10"></div>
+        <p className="text-2xl sm:text-3xl lg:text-4xl text-blue-200 font-bold leading-relaxed from-blue-400 to-blue-600 bg-clip-text italic">
           "The world's first truly creator-first streaming platform goes live
           soon. <br /> Don't just watch history — be part of it."
         </p>
@@ -74,13 +74,13 @@ const Signup = () => {
             {/* Countdown Timer with Creative Design */}
             <div className="relative group">
               {/* Animated Background Glow */}
-              <div className="absolute -inset-4 bg-linear-to-r from-red-600/20 to-red-400/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10"></div>
+              <div className="absolute -inset-4 bg-linear-to-r from-blue-600/20 to-blue-400/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10"></div>
 
               {/* Main Timer Container */}
-              <div className="relative bg-linear-to-br from-black/60 to-red-950/30 border-2 border-red-900/40 rounded-3xl p-8 lg:p-10 backdrop-blur-sm overflow-hidden">
+              <div className="relative bg-linear-to-br from-black/60 to-blue-950/30 border-2 border-blue-900/40 rounded-3xl p-8 lg:p-10 backdrop-blur-sm overflow-hidden">
                 {/* Floating Particles */}
-                {/* <div className="absolute top-4 right-4 w-3 h-3 bg-red-500 rounded-full opacity-60 animate-ping"></div> */}
-                <div className="absolute bottom-6 left-6 w-2 h-2 bg-red-400 rounded-full opacity-40 animate-pulse delay-1000"></div>
+                {/* <div className="absolute top-4 right-4 w-3 h-3 bg-blue-500 rounded-full opacity-60 animate-ping"></div> */}
+                <div className="absolute bottom-6 left-6 w-2 h-2 bg-blue-400 rounded-full opacity-40 animate-pulse delay-1000"></div>
 
                 {/* Timer Grid with Enhanced Design */}
                 <div className="grid grid-cols-4 gap-3 lg:gap-4 mb-8 relative z-10">
@@ -88,22 +88,22 @@ const Signup = () => {
                     {
                       value: timeLeft.days,
                       label: "DAYS",
-                      color: "from-red-600 to-red-700",
+                      color: "from-blue-600 to-blue-700",
                     },
                     {
                       value: timeLeft.hours,
                       label: "HOURS",
-                      color: "from-red-500 to-red-600",
+                      color: "from-blue-500 to-blue-600",
                     },
                     {
                       value: timeLeft.minutes,
                       label: "MINUTES",
-                      color: "from-red-400 to-red-500",
+                      color: "from-blue-400 to-blue-500",
                     },
                     {
                       value: timeLeft.seconds,
                       label: "SECONDS",
-                      color: "from-red-300 to-red-400",
+                      color: "from-blue-300 to-blue-400",
                     },
                   ].map((unit, index) => (
                     <div
@@ -113,30 +113,30 @@ const Signup = () => {
                       {/* 3D Flip Container */}
                       <div className="relative w-full h-24 lg:h-28 transform-style-preserve-3d transition-all duration-700 group-hover/time-unit:rotate-y-180">
                         {/* Front Side */}
-                        <div className="absolute inset-0 backface-hidden bg-linear-to-br from-black/90 to-red-950/60 border-2 border-red-700/40 rounded-2xl p-4 transform rotate-y-0">
+                        <div className="absolute inset-0 backface-hidden bg-linear-to-br from-black/90 to-blue-950/60 border-2 border-blue-700/40 rounded-2xl p-4 transform rotate-y-0">
                           {/* Animated Background Pulse */}
-                          <div className="absolute inset-0 bg-linear-to-r from-red-500/10 to-red-600/5 rounded-2xl opacity-0 group-hover/time-unit:opacity-100 transition-opacity duration-500"></div>
+                          <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 to-blue-600/5 rounded-2xl opacity-0 group-hover/time-unit:opacity-100 transition-opacity duration-500"></div>
 
                           {/* Glowing Orb */}
-                          <div className="absolute top-2 right-2 w-3 h-3 bg-red-500 rounded-full opacity-60 animate-ping"></div>
+                          <div className="absolute top-2 right-2 w-3 h-3 bg-blue-500 rounded-full opacity-60 animate-ping"></div>
 
                           {/* Main Content */}
                           <div className="relative z-10">
-                            <div className="text-2xl lg:text-3xl font-bold text-white font-mono mb-1 drop-shadow-lg bg-linear-to-r from-white to-red-200 bg-clip-text">
+                            <div className="text-2xl lg:text-3xl font-bold text-white font-mono mb-1 drop-shadow-lg bg-linear-to-r from-white to-blue-200 bg-clip-text">
                               {unit.value.toString().padStart(2, "0")}
                             </div>
-                            <div className="text-xs lg:text-sm text-gray-300 font-semibold tracking-widest uppercase bg-linear-to-r from-gray-300 to-red-300 bg-clip-text">
+                            <div className="text-xs lg:text-sm text-gray-300 font-semibold tracking-widest uppercase bg-linear-to-r from-gray-300 to-blue-300 bg-clip-text">
                               {unit.label}
                             </div>
                           </div>
 
                           {/* Corner Accents */}
-                          <div className="absolute top-2 left-2 w-2 h-2 bg-linear-to-r from-red-400 to-red-500 rounded-full opacity-0 group-hover/time-unit:opacity-100 transition-opacity duration-300"></div>
-                          <div className="absolute bottom-2 right-2 w-2 h-2 bg-linear-to-r from-red-400 to-red-500 rounded-full opacity-0 group-hover/time-unit:opacity-100 transition-opacity duration-300 delay-150"></div>
+                          <div className="absolute top-2 left-2 w-2 h-2 bg-linear-to-r from-blue-400 to-blue-500 rounded-full opacity-0 group-hover/time-unit:opacity-100 transition-opacity duration-300"></div>
+                          <div className="absolute bottom-2 right-2 w-2 h-2 bg-linear-to-r from-blue-400 to-blue-500 rounded-full opacity-0 group-hover/time-unit:opacity-100 transition-opacity duration-300 delay-150"></div>
                         </div>
 
                         {/* Back Side - Revealed on Hover */}
-                        <div className="absolute inset-0 backface-hidden bg-linear-to-br from-red-600 to-red-700 border-2 border-red-400/60 rounded-2xl p-4 transform rotate-y-180">
+                        <div className="absolute inset-0 backface-hidden bg-linear-to-br from-blue-600 to-blue-700 border-2 border-blue-400/60 rounded-2xl p-4 transform rotate-y-180">
                           {/* Sparkle Effect */}
                           <div className="absolute inset-0 overflow-hidden rounded-2xl">
                             <div className="absolute top-0 left-1/4 w-1 h-1 bg-white rounded-full animate-sparkle"></div>
@@ -173,13 +173,13 @@ const Signup = () => {
                       </div>
 
                       {/* Floating Glow Effect */}
-                      <div className="absolute inset-0 bg-linear-to-r from-red-500/20 to-red-600/10 rounded-2xl blur-md opacity-0 group-hover/time-unit:opacity-100 transition-all duration-500 -z-10 scale-110"></div>
+                      <div className="absolute inset-0 bg-linear-to-r from-blue-500/20 to-blue-600/10 rounded-2xl blur-md opacity-0 group-hover/time-unit:opacity-100 transition-all duration-500 -z-10 scale-110"></div>
 
                       {/* Connection Lines */}
                       {index < 3 && (
                         <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-20">
-                          <div className="w-4 lg:w-6 h-0.5 bg-linear-to-r from-red-500 to-red-400 rounded-full opacity-60 group-hover/time-unit:opacity-100 transition-opacity duration-300"></div>
-                          <div className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full opacity-0 group-hover/time-unit:opacity-100 animate-ping"></div>
+                          <div className="w-4 lg:w-6 h-0.5 bg-linear-to-r from-blue-500 to-blue-400 rounded-full opacity-60 group-hover/time-unit:opacity-100 transition-opacity duration-300"></div>
+                          <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full opacity-0 group-hover/time-unit:opacity-100 animate-ping"></div>
                         </div>
                       )}
                     </div>
@@ -224,17 +224,17 @@ const Signup = () => {
                     <span className="text-white font-semibold text-sm lg:text-base">
                       🚀 Founder Spots Remaining
                     </span>
-                    <span className="text-red-400 font-bold text-sm lg:text-base bg-red-900/30 px-3 py-1 rounded-full">
+                    <span className="text-blue-400 font-bold text-sm lg:text-base bg-blue-900/30 px-3 py-1 rounded-full">
                       42%
                     </span>
                   </div>
 
                   {/* Animated Progress Bar */}
-                  <div className="relative">
+                  <div className="relative" id="signup-mobile">
                     <div className="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
                       <div className="relative">
                         <div
-                          className="bg-linear-to-r from-red-600 via-red-500 to-red-400 h-3 rounded-full transition-all duration-1000 ease-out shadow-lg shadow-red-500/30 relative overflow-hidden"
+                          className="bg-linear-to-r from-blue-600 via-blue-500 to-blue-400 h-3 rounded-full transition-all duration-1000 ease-out shadow-lg shadow-blue-500/30 relative overflow-hidden"
                           style={{ width: "42%" }}
                         >
                           {/* Progress Bar Shine */}
@@ -249,7 +249,7 @@ const Signup = () => {
                         <div
                           key={percent}
                           className={`w-2 h-2 rounded-full ${
-                            percent <= 42 ? "bg-red-500" : "bg-gray-600"
+                            percent <= 42 ? "bg-blue-500" : "bg-gray-600"
                           } transition-all duration-500`}
                         ></div>
                       ))}
@@ -258,7 +258,7 @@ const Signup = () => {
 
                   <p className="text-gray-400 text-center text-sm lg:text-base">
                     ✨ Join{" "}
-                    <span className="text-red-400 font-semibold">
+                    <span className="text-blue-400 font-semibold">
                       580+ creators
                     </span>{" "}
                     who secured their Founder status
@@ -269,27 +269,27 @@ const Signup = () => {
           </div>
 
           {/* Right Content - Creative Signup Form */}
-          <div className="relative group">
+          <div className="relative group" >
             {/* Floating Orbital Elements */}
-            <div className="absolute -top-8 -right-8 w-16 h-16 bg-red-500/10 rounded-full border border-red-500/20 animate-pulse"></div>
-            <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-red-400/10 rounded-full border border-red-400/20 animate-pulse delay-700"></div>
+            <div className="absolute -top-8 -right-8 w-16 h-16 bg-blue-500/10 rounded-full border border-blue-500/20 animate-pulse"></div>
+            <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-blue-400/10 rounded-full border border-blue-400/20 animate-pulse delay-700"></div>
 
             {/* Form Container with Enhanced Effects */}
             <div className="relative">
               {/* Outer Glow */}
-              <div className="absolute -inset-6 bg-linear-to-r from-red-600/30 to-red-400/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500 -z-20"></div>
+              <div className="absolute -inset-6 bg-linear-to-r from-blue-600/30 to-blue-400/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500 -z-20"></div>
 
               {/* Inner Container */}
-              <div className="relative bg-linear-to-br from-black/80 via-black/60 to-red-950/40 border-2 border-red-600/40 rounded-3xl p-8 lg:p-10 shadow-2xl shadow-red-500/20 backdrop-blur-sm overflow-hidden">
+              <div className="relative bg-linear-to-br from-black/80 via-black/60 to-blue-950/40 border-2 border-blue-600/40 rounded-3xl p-8 lg:p-10 shadow-2xl shadow-blue-500/20 backdrop-blur-sm overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5">
-                  <div className="absolute top-0 left-0 w-32 h-32 bg-red-500 rounded-full blur-2xl"></div>
-                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-red-400 rounded-full blur-2xl"></div>
+                  <div className="absolute top-0 left-0 w-32 h-32 bg-blue-500 rounded-full blur-2xl"></div>
+                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-blue-400 rounded-full blur-2xl"></div>
                 </div>
 
                 {/* Form Header with Creative Design */}
                 <div className="text-center relative z-10">
-                  <div className="inline-flex items-center space-x-3 bg-linear-to-r from-red-600 to-red-600 rounded-full px-6 py-3 mb-6 shadow-lg">
+                  <div className="inline-flex items-center space-x-3 bg-linear-to-r from-blue-600 to-blue-600 rounded-full px-6 py-3 mb-6 shadow-lg">
                     <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                     <span className="text-white text-sm font-bold tracking-widest">
                       ENTER EMAIL TO — LOCK YOUR FOUNDERS SPOT
@@ -310,14 +310,14 @@ const Signup = () => {
                       <span>Professional Email:</span>
                     </label>
                     <div className="relative">
-                      <div className="absolute -inset-1 bg-linear-to-r from-red-600 to-red-400 rounded-2xl blur opacity-0 group-hover/input:opacity-30 transition-opacity duration-300 -z-10"></div>
+                      <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-blue-400 rounded-2xl blur opacity-0 group-hover/input:opacity-30 transition-opacity duration-300 -z-10"></div>
                       <input
                         type="email"
                         id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="your.creative@studio.com"
-                        className="w-full bg-black/70 border-2 border-white/10 rounded-2xl px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-red-600 focus:ring-4 focus:ring-red-500/30 transition-all duration-300 text-lg backdrop-blur-sm"
+                        className="w-full bg-black/70 border-2 border-white/10 rounded-2xl px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-500/30 transition-all duration-300 text-lg backdrop-blur-sm"
                         required
                       />
                     </div>
@@ -327,7 +327,7 @@ const Signup = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`cursor-pointer w-full relative overflow-hidden group/btn bg-linear-to-r from-red-600 via-red-500 to-red-600 hover:from-red-600 hover:via-red-500 hover:to-red-600 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-red-500/40 flex items-center justify-center space-x-3 text-lg ${
+                    className={`cursor-pointer w-full relative overflow-hidden group/btn bg-linear-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-600 hover:via-blue-500 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/40 flex items-center justify-center space-x-3 text-lg ${
                       isSubmitting ? "opacity-50 cursor-not-allowed" : ""
                     }`}
                   >
@@ -358,7 +358,7 @@ const Signup = () => {
 
       {/* Bottom Decoration */}
       <div className="w-full flex justify-center mt-16 lg:mt-24">
-        <div className="w-32 h-1 bg-linear-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
+        <div className="w-32 h-1 bg-linear-to-r from-transparent via-blue-600 to-transparent rounded-full"></div>
       </div>
     </div>
   );

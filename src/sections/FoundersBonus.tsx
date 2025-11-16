@@ -28,8 +28,8 @@ const FoundersBonus = () => {
         "Mid-level creators, filmmakers, or influencers ready to grow their audience and income.",
       includes: [
         "180 days 0% platform fees",
-        "1 year 90/10 revenue split (vs. standard 80/20 after year 1)",
-        "Free onboarding audit by FRBstudios team – includes content feedback + monetization setup guidance",
+        "1 year 90/10 revenue split",
+        "Free onboarding audit includes content feedback + monetization setup guidance",
         "$100 TV-ish ad credit for promoting your channel or videos",
         "Exclusive referral code (earn 5% from referrals for 1 year)",
         "Invite to Founders Launch Event (virtual or in-person)",
@@ -65,13 +65,13 @@ const FoundersBonus = () => {
   ];
 
   const addOns = [
-    "📈 Referral Rewards: Every referred verified creator earns you 10 TV-ish points = $10 ad credit",
+    "📈 Referral Rewards: Earn money through referrals",
     "🎫 Early Access to Creator Marketplace: Test & sell exclusive content, workshops, and digital products",
     "💡 Beta Tester Role: Help shape future features & earn rewards for bug reports or feedback",
   ];
 
   return (
-    <div className="w-full min-h-fit bg-linear-to-tl from-black via-black to-red-950/50 px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <div className="w-full min-h-fit bg-linear-to-tl from-black via-black to-blue-950/50 px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
       {/* Header Section */}
       <div className="w-full text-center mb-16 lg:mb-10">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
@@ -80,9 +80,9 @@ const FoundersBonus = () => {
             alt="TV-ish"
             className="inline-block h-[1.5em] align-middle mx-1 lg:-mt-10.75 md:-mt-7 sm:-mt-7 -mt-6 lg:-mr-5 md:-mr-3 sm:-mr-2 -mr-1 lg:-ml-6 md:-ml-4 sm:-ml-3 -ml-2"
           />{" "}
-          <span className="text-red-600 italic">Founder</span> Packages
+          <span className="text-blue-600 italic">Founder</span> Packages
         </h1>
-        <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-10"></div>
+        <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-10"></div>
       </div>
 
       {/* Founder Packages Grid */}
@@ -91,13 +91,13 @@ const FoundersBonus = () => {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`group relative bg-linear-to-br from-black/60 to-black/40 border-2 rounded-3xl p-8 hover:border-red-600/50 transition-all duration-500 cursor-pointer hover:scale-105 border-red-900/30`}
+              className={`group relative bg-linear-to-br from-black/60 to-black/40 border-2 rounded-3xl p-8 hover:border-blue-600/50 transition-all duration-500 cursor-pointer hover:scale-105 border-blue-900/30`}
             >
               {/* Package Badge */}
               <div className="text-center mb-6">
-                <div className="inline-flex items-center space-x-2 bg-red-900/30 border border-red-600/40 rounded-full px-4 py-2 mb-4">
+                <div className="inline-flex items-center space-x-2 bg-blue-900/30 border border-blue-600/40 rounded-full px-4 py-2 mb-4">
                   <span className="text-lg">{pkg.badge.split(" ")[0]}</span>
-                  <span className="text-red-200 text-sm font-bold tracking-widest">
+                  <span className="text-blue-200 text-sm font-bold tracking-widest">
                     {pkg.badge.split(" ")[1]}
                   </span>
                 </div>
@@ -105,14 +105,14 @@ const FoundersBonus = () => {
                 <h2 className="text-2xl lg:text-4xl font-bold text-white mb-2">
                   {pkg.tier}
                 </h2>
-                <p className="text-2xl text-red-400 font-semibold mb-2">
+                <p className="text-2xl text-blue-400 font-semibold mb-2">
                   {pkg.subtitle}
                 </p>
                 <p className="text-sm text-gray-400 mb-4">{pkg.limit}</p>
               </div>
 
               {/* Perfect For */}
-              <div className="bg-red-900/30 border-l-4 border-red-600 pl-6 rounded-r-lg p-2 mb-6">
+              <div className="bg-blue-900/30 border-l-4 border-blue-600 pl-6 rounded-r-lg p-2 mb-6">
                 <p className="text-white text-sm font-bold text-left">
                   "Perfect for: {pkg.perfectFor}"
                 </p>
@@ -129,7 +129,7 @@ const FoundersBonus = () => {
                       key={itemIndex}
                       className="flex items-start space-x-3 text-gray-300 text-sm lg:text-base"
                     >
-                      <span className="text-red-400 mt-0.5 shrink-0">•</span>
+                      <span className="text-blue-400 mt-0.5 shrink-0">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -137,15 +137,15 @@ const FoundersBonus = () => {
               </div>
 
               {/* Value & Requirements */}
-              <div className="border-t border-red-900/30 pt-6 space-y-3">
-                <div className="flex justify-between items-center">
+              <div className="border-t border-blue-900/30 pt-6 space-y-3">
+                {/* <div className="flex justify-between items-center">
                   <span className="text-gray-400 font-semibold">Value:</span>
                   <span className="text-white font-bold text-5xl">
                     {pkg.value}
                   </span>
-                </div>
-                <div className="bg-red-600/20 rounded-lg p-3 border border-red-900/20 mt-8">
-                  <p className="text-red-300 text-sm text-center font-semibold">
+                </div> */}
+                <div className="bg-blue-600/20 rounded-lg p-3 border border-blue-900/20 mt-8">
+                  <p className="text-blue-300 text-sm text-center font-semibold">
                     {pkg.requirements}
                   </p>
                 </div>
@@ -159,18 +159,18 @@ const FoundersBonus = () => {
       <div className="w-full max-w-7xl mx-auto mb-16 lg:mb-20">
         <div className="relative group">
           {/* Animated Background Glow */}
-          <div className="absolute -inset-4 bg-linear-to-r from-red-600/20 to-red-400/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10"></div>
+          <div className="absolute -inset-4 bg-linear-to-r from-blue-600/20 to-blue-400/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10"></div>
 
           {/* Main Container */}
-          <div className="relative bg-linear-to-br from-black/80 to-red-950/30 border-2 border-red-900/30 rounded-3xl p-8 lg:p-10 backdrop-blur-sm overflow-hidden">
+          <div className="relative bg-linear-to-br from-black/80 to-blue-950/30 border-2 border-blue-900/30 rounded-3xl p-8 lg:p-10 backdrop-blur-sm overflow-hidden">
             {/* Floating Particles */}
-            <div className="absolute top-4 right-6 w-3 h-3 bg-red-500 rounded-full opacity-60 animate-ping"></div>
-            <div className="absolute bottom-8 left-8 w-2 h-2 bg-red-400 rounded-full opacity-40 animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-10 w-1 h-1 bg-red-300 rounded-full opacity-30 animate-bounce delay-500"></div>
+            <div className="absolute top-4 right-6 w-3 h-3 bg-blue-500 rounded-full opacity-60 animate-ping"></div>
+            <div className="absolute bottom-8 left-8 w-2 h-2 bg-blue-400 rounded-full opacity-40 animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-10 w-1 h-1 bg-blue-300 rounded-full opacity-30 animate-bounce delay-500"></div>
 
             {/* Header Section */}
             <div className="text-center mb-5 relative z-10">
-              <div className="inline-flex items-center space-x-3 bg-linear-to-r from-red-600 to-red-600 rounded-full px-6 py-3 mb-6 shadow-lg">
+              <div className="inline-flex items-center space-x-3 bg-linear-to-r from-blue-600 to-blue-600 rounded-full px-6 py-3 mb-6 shadow-lg">
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                 <span className="text-white text-sm font-bold tracking-widest">
                   OPTIONAL ADD-ONs FOR ALL TIERS
@@ -183,24 +183,24 @@ const FoundersBonus = () => {
               {addOns.map((addOn, index) => (
                 <div
                   key={index}
-                  className="group/card relative bg-linear-to-br from-black/60 to-red-950/20 border-2 border-red-900/40 rounded-2xl p-6 lg:p-7 hover:border-red-500/60 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer overflow-hidden"
+                  className="group/card relative bg-linear-to-br from-black/60 to-blue-950/20 border-2 border-blue-900/40 rounded-2xl p-6 lg:p-7 hover:border-blue-500/60 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer overflow-hidden"
                 >
                   {/* Card Background Effects */}
-                  <div className="absolute inset-0 bg-linear-to-br from-red-600/5 to-red-400/3 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-linear-to-br from-blue-600/5 to-blue-400/3 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
 
                   {/* Animated Corner Accents */}
                   <div className="absolute top-3 left-3 w-3 h-3">
-                    <div className="w-full h-full border-t-2 border-l-2 border-red-500 rounded-tl-lg opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
+                    <div className="w-full h-full border-t-2 border-l-2 border-blue-500 rounded-tl-lg opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <div className="absolute bottom-3 right-3 w-3 h-3">
-                    <div className="w-full h-full border-b-2 border-r-2 border-red-500 rounded-br-lg opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 delay-150"></div>
+                    <div className="w-full h-full border-b-2 border-r-2 border-blue-500 rounded-br-lg opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 delay-150"></div>
                   </div>
 
                   {/* Content */}
                   <div className="relative z-10">
                     {/* Icon Header */}
                     <div className="text-center mb-4">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-red-600/20 rounded-xl mb-3 group-hover/card:scale-110 transition-transform duration-300">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600/20 rounded-xl mb-3 group-hover/card:scale-110 transition-transform duration-300">
                         <span className="text-xl">{addOn.split(" ")[0]}</span>
                       </div>
                     </div>
@@ -222,7 +222,7 @@ const FoundersBonus = () => {
 
       {/* Bottom Decoration */}
       <div className="w-full flex justify-center mt-16 lg:mt-24">
-        <div className="w-32 h-1 bg-linear-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
+        <div className="w-32 h-1 bg-linear-to-r from-transparent via-blue-600 to-transparent rounded-full"></div>
       </div>
     </div>
   );

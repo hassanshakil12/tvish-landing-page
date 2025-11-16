@@ -19,7 +19,7 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full min-h-fit bg-linear-to-br from-black via-black to-red-950/50 px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
+    <div className="w-full min-h-fit bg-linear-to-br from-black via-black to-blue-950/50 px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
       {/* Header Section */}
       <div className="w-full text-center mb-16 lg:mb-10">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
@@ -29,17 +29,11 @@ const About = () => {
             alt="TV-ish"
             className="inline-block h-[1.5em] align-middle mx-1 lg:-mt-10.75 md:-mt-7 sm:-mt-7 -mt-6 lg:-mr-5 md:-mr-3 sm:-mr-2 -mr-1 lg:-ml-6 md:-ml-4 sm:-ml-3 -ml-2"
           />{" "}
-          <span className="text-red-600 italic">Different?</span>
+          <span className="text-blue-600 italic">Different?</span>
         </h1>
-        <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-10"></div>
-        <p className="text-2xl sm:text-3xl lg:text-4xl text-red-200 font-bold leading-relaxed from-red-400 to-red-600 bg-clip-text italic">
-          "We built{" "}
-          <img
-            src="/img/logo.png"
-            alt="TV-ish"
-            className="inline-block h-[1.5em] align-middle mx-1 lg:-mt-5 md:-mt-4 sm:-mt-4.5 -mt-3.5 lg:-mr-2 md:-mr-1 sm:-mr-1 -mr-0.5 lg:-ml-3 md:-ml-2 sm:-ml-2 -ml-1"
-          />{" "}
-          for creators — Not corporations."
+        <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-10"></div>
+        <p className="text-2xl sm:text-3xl lg:text-4xl text-blue-200 font-bold leading-relaxed from-blue-400 to-blue-600 bg-clip-text italic">
+          "We built Tv-ish for creators — Not corporations."
         </p>
       </div>
 
@@ -50,7 +44,7 @@ const About = () => {
           <div className="text-center">
             <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto ">
               You keep more of your{" "}
-              <span className="text-red-600 font-bold italic">revenue</span>,
+              <span className="text-blue-600 font-bold italic">revenue</span>,
               own your{" "}
               <span className="text-white font-bold italic">
                 rights, and connect
@@ -65,7 +59,7 @@ const About = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-linear-to-br from-black/60 to-red-950/30 border border-red-900/30 rounded-2xl p-8 hover:border-red-600/50 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer"
+                className="group bg-linear-to-br from-black/60 to-blue-950/30 border border-blue-900/30 rounded-2xl p-8 hover:border-blue-600/50 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer"
               >
                 <div className="text-center mb-6">
                   <div className="text-4xl lg:text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
@@ -86,7 +80,7 @@ const About = () => {
 
       {/* Bottom Decoration */}
       <div className="w-full flex justify-center mt-16 lg:mt-24">
-        <div className="w-32 h-1 bg-linear-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
+        <div className="w-32 h-1 bg-linear-to-r from-transparent via-blue-600 to-transparent rounded-full"></div>
       </div>
     </div>
   );

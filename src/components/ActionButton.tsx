@@ -13,11 +13,37 @@ const ActionButton = ({ name, href = "#signup" }: ButtonProps) => {
   const [dragPosition, setDragPosition] = useState({ x: 0, y: 0 });
   const [startPosition, setStartPosition] = useState({ x: 0, y: 0 });
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const mobile = window.innerWidth < 1280; // Using 1280px as requested
+      setIsMobile(mobile);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   const handleClick = () => {
-    const element = document.getElementById(href.replace("#", ""));
+    const targetId = isMobile ? "signup-mobile" : href.replace("#", "");
+
+    const element = document.getElementById(targetId);
+
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } else {
+      // Fallback to original href if mobile target not found
+      const fallbackElement = document.getElementById(href.replace("#", ""));
+      if (fallbackElement) {
+        fallbackElement.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     }
   };
 
@@ -148,7 +174,7 @@ const ActionButton = ({ name, href = "#signup" }: ButtonProps) => {
   }, [href]);
 
   // Check if mobile/tablet
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
+  // const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
 
   return (
     <button
@@ -268,7 +294,7 @@ const ActionButton = ({ name, href = "#signup" }: ButtonProps) => {
 
         {/* Vintage Stamp Effect - Hidden on mobile peek */}
         {(!isMobile || isExpanded) && (
-          <div className="absolute -bottom-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 bg-red-600 rounded-full border-2 border-amber-800 opacity-90 group-hover:rotate-12 transition-transform duration-300">
+          <div className="absolute -bottom-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-full border-2 border-amber-800 opacity-90 group-hover:rotate-12 transition-transform duration-300">
             <div className="absolute inset-1 border border-amber-200 rounded-full"></div>
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="text-amber-50 text-xs font-bold">GO!</span>

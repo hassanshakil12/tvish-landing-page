@@ -2,14 +2,14 @@ import { ButtonAlt } from "../components";
 
 const LeadCapture = () => {
   return (
-    <div className="w-full min-h-fit bg-linear-to-tr from-black via-black to-red-950/50 px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <div className="w-full min-h-fit bg-linear-to-tr from-black via-black to-blue-950/50 px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
       {/* Header Section */}
       <div className="w-full text-center mb-16 lg:mb-10">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
-          The <span className="text-red-600 italic">Founders</span> Program
+          The <span className="text-blue-600 italic">Founders</span> Program
         </h1>
-        <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-10"></div>
-        <p className="text-2xl sm:text-3xl lg:text-4xl text-red-200 font-bold leading-relaxed from-red-400 to-red-600 bg-clip-text italic">
+        <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-10"></div>
+        <p className="text-2xl sm:text-3xl lg:text-4xl text-blue-200 font-bold leading-relaxed from-blue-400 to-blue-600 bg-clip-text italic">
           "Only 1,000 Founders Will Shape the Future."
         </p>
       </div>
@@ -26,17 +26,17 @@ const LeadCapture = () => {
                   1 year perks
                 </span>
                 , exclusive exposure, and{" "}
-                <span className="text-red-600 font-bold italic">
+                <span className="text-blue-600 font-bold italic">
                   0% platform fees at launch
                 </span>
                 .
               </p>
 
-              <div className="bg-red-900/30 border-l-4 border-red-600 pl-6 py-6 rounded-r-lg">
+              <div className="bg-blue-900/30 border-l-4 border-blue-600 pl-6 py-6 rounded-r-lg">
                 <p className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold italic mb-3">
                   "Founders aren't just users — they're pioneers."
                 </p>
-                <p className="text-xl text-red-200 font-semibold">
+                <p className="text-xl text-blue-200 font-semibold">
                   Helping define the new creator economy from day one.
                 </p>
               </div>
@@ -66,7 +66,7 @@ const LeadCapture = () => {
 
       {/* Bottom Decoration */}
       <div className="w-full flex justify-center mt-16 lg:mt-24">
-        <div className="w-32 h-1 bg-linear-to-r from-transparent via-red-600 to-transparent rounded-full"></div>
+        <div className="w-32 h-1 bg-linear-to-r from-transparent via-blue-600 to-transparent rounded-full"></div>
       </div>
     </div>
   );

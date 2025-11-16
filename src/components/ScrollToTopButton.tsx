@@ -31,12 +31,12 @@ const ScrollToTopButton = () => {
       onClick={scrollToTop}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`cursor-pointer fixed bottom-8 right-8 bg-linear-to-br from-red-600 to-red-600 hover:from-red-600 hover:to-red-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-500 ${
+      className={`cursor-pointer fixed bottom-8 right-8 bg-linear-to-br from-blue-600 to-blue-600 hover:from-blue-600 hover:to-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-500 ${
         isVisible
           ? "opacity-100 scale-100 translate-y-0"
           : "opacity-0 scale-75 translate-y-10 pointer-events-none"
       } ${
-        isHovered ? "shadow-red-500/40 scale-110" : "shadow-red-500/25"
+        isHovered ? "shadow-blue-500/40 scale-110" : "shadow-blue-500/25"
       } z-50`}
       aria-label="Scroll to top"
     >

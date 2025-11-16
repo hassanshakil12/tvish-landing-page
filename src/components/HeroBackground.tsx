@@ -2,9 +2,9 @@ import { Button } from "./";
 
 const HeroBackground = () => {
   const posters = [
-    "/img/poster_01.jpg",
     "/img/poster_02.jpg",
     "/img/poster_03.jpg",
+    "/img/poster_01.jpg",
     "/img/poster_04.jpg",
     "/img/poster_05.jpg",
     "/img/poster_06.jpg",
@@ -121,27 +121,27 @@ const HeroBackground = () => {
       </div>
 
       {/* Gradient Overlay with Content */}
-      <div className="absolute inset-0 bg-linear-to-t from-black via-black/90 to-transparent flex items-end pb-8 sm:pb-12 md:pb-16 lg:pb-20">
+      <div className="absolute inset-0 bg-linear-to-t from-black via-black/90 to-transparent flex items-end pb-8 sm:pb-12 md:pb-16 lg:pb-20 backdrop-blur-[5px]">
         <div className="text-center px-4 w-full max-w-6xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-5 md:mb-6 text-white tracking-tight leading-tight">
-            The <span className="text-red-600 italic">Revolution</span> in
+            The <span className="text-blue-600 italic">Revolution</span> in
             Streaming
             <br className="hidden sm:block" /> is Coming.
           </h1>
 
           {/* Sub Headline */}
-          <blockquote className="text-2xl sm:text-3xl lg:text-4xl text-red-200 font-bold mb-4 sm:mb-5 md:mb-6 leading-relaxed from-red-400 to-red-600 bg-clip-text italic">
+          <blockquote className="text-2xl sm:text-3xl lg:text-4xl text-blue-200 font-bold mb-4 sm:mb-5 md:mb-6 leading-relaxed from-blue-400 to-blue-600 bg-clip-text italic">
             "Be the First to Create. <br className="hidden xs:block" />
             Get Paid from Day One."
           </blockquote>
 
           {/* Description */}
-          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto">
+          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto mt-8">
             <img
               src="/img/logo.png"
               alt="TV-ish"
-              className="inline-block h-[2.5em] align-middle mx-1 lg:-mt-9 md:-mt-7 sm:-mt-7 -mt-6 -mr-2"
+              className="inline-block h-[2.75em] align-middle mx-1 lg:-mt-10.5 md:-mt-8.5 sm:-mt-8.5 -mt-7.5 -mr-2"
             />{" "}
             is the new home for creators who want{" "}
             <span className="text-white font-bold italic">
