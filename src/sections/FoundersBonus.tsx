@@ -405,7 +405,7 @@ const FoundersBonus = () => {
                     ) : (
                       <button
                         onClick={handleSilverButtonClick}
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 group/btn relative overflow-hidden"
+                        className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 group/btn relative overflow-hidden"
                       >
                         <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
                         <span className="relative z-10">{pkg.button.text}</span>
@@ -430,7 +430,7 @@ const FoundersBonus = () => {
                   <div className="mt-4">
                     <button
                       onClick={handleGoldInterest}
-                      className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 group/btn relative overflow-hidden"
+                      className="cursor-pointer w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 group/btn relative overflow-hidden"
                     >
                       <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
                       <span className="relative z-10">Learn More</span>
