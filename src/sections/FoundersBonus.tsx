@@ -1,3 +1,5 @@
+import type { MouseEvent } from 'react';
+
 const FoundersBonus = () => {
   const packages = [
     {
@@ -81,22 +83,22 @@ const FoundersBonus = () => {
   ];
 
   // Smooth scroll function for Bronze package
-  const handleBronzeRedirect = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    const target = document.querySelector("#signup");
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+  const handleBronzeRedirect = (e: MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+  const target = document.querySelector("#signup");
+  if (target) {
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
 
-      setTimeout(() => {
-        target.setAttribute("tabindex", "-1");
-        target.focus();
-        target.removeAttribute("tabindex");
-      }, 1000);
-    }
-  };
+    setTimeout(() => {
+      target.setAttribute("tabindex", "-1");
+      (target as HTMLElement).focus();
+      target.removeAttribute("tabindex");
+    }, 1000);
+  }
+};
 
   // Function to handle Silver button click
   const handleSilverButtonClick = () => {
