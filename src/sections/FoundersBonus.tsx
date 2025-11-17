@@ -1,4 +1,4 @@
-import type { MouseEvent } from 'react';
+import type { MouseEvent } from "react";
 
 const FoundersBonus = () => {
   const packages = [
@@ -84,21 +84,21 @@ const FoundersBonus = () => {
 
   // Smooth scroll function for Bronze package
   const handleBronzeRedirect = (e: MouseEvent<HTMLAnchorElement>) => {
-  e.preventDefault();
-  const target = document.querySelector("#signup");
-  if (target) {
-    target.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    e.preventDefault();
+    const target = document.querySelector("#signup");
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
 
-    setTimeout(() => {
-      target.setAttribute("tabindex", "-1");
-      (target as HTMLElement).focus();
-      target.removeAttribute("tabindex");
-    }, 1000);
-  }
-};
+      setTimeout(() => {
+        target.setAttribute("tabindex", "-1");
+        (target as HTMLElement).focus();
+        target.removeAttribute("tabindex");
+      }, 1000);
+    }
+  };
 
   // Function to handle Silver button click
   const handleSilverButtonClick = () => {
@@ -109,7 +109,7 @@ const FoundersBonus = () => {
     popup.innerHTML = `
       <div class="relative bg-linear-to-br from-black/90 to-blue-950/80 border-2 border-blue-600/50 rounded-3xl p-6 md:p-8 max-w-md w-full mx-auto shadow-2xl animate-fade-in">
         <!-- Close Button -->
-        <button class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform z-10">
+        <button class="cursor-pointer absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform z-10">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
@@ -139,7 +139,7 @@ const FoundersBonus = () => {
             </div>
           </div>
 
-          <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 group/btn relative overflow-hidden">
+          <button class="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 group/btn relative overflow-hidden">
             <div class="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
             <span class="relative z-10">Register for Silver</span>
             <svg 
@@ -215,7 +215,7 @@ const FoundersBonus = () => {
     popup.innerHTML = `
       <div class="relative bg-linear-to-br from-black/90 to-yellow-950/80 border-2 border-yellow-500/50 rounded-3xl p-6 md:p-8 max-w-md w-full mx-auto shadow-2xl animate-fade-in">
         <!-- Close Button -->
-        <button class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform z-10">
+        <button class="cursor-pointer absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform z-10">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
