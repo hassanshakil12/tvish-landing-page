@@ -14,7 +14,7 @@ const FoundersBonus = () => {
         "Invitation to the private TV-ish Creator Discord",
         "Name featured on the official 'Founders Wall' landing page",
       ],
-      value: "~$300",
+      value: "~$350",
       requirements: "Free with early signup",
       gradient: "from-yellow-600/20 to-yellow-800/10",
       border: "border-yellow-600/40",
