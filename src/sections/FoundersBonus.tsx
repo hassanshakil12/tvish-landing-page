@@ -298,7 +298,7 @@ const FoundersBonus = () => {
           <img
             src="/img/logo.png"
             alt="TV-ish"
-            className="inline-block h-[1.2em] sm:h-[1.3em] lg:h-[1.5em] align-middle mx-1 lg:-mt-2 md:-mt-1 sm:-mt-1 -mt-1 lg:-mr-2 md:-mr-1 sm:-mr-1 -mr-1 lg:-ml-3 md:-ml-2 sm:-ml-1 -ml-1"
+            className="inline-block h-[1.5em] align-middle mx-1 lg:-mt-10.75 md:-mt-7 sm:-mt-7 -mt-6 lg:-mr-5 md:-mr-3 sm:-mr-2 -mr-1 lg:-ml-6 md:-ml-4 sm:-ml-3 -ml-2"
           />{" "}
           <span className="text-blue-600 italic">Founder</span> Packages
         </h1>
