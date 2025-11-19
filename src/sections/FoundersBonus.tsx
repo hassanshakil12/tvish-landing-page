@@ -10,7 +10,7 @@ const FoundersBonus = () => {
         "Independent filmmakers, vloggers, musicians, or podcasters just starting to monetize.",
       includes: [
         "Founders Badge on your profile & videos",
-        "90 days with 0% platform fees (keep 100% of revenue)",
+        "90 days, 90/10 revenue split",
         "Priority listing in the 'New Creator' section on launch week",
         "Access to advanced analytics dashboard (early beta)",
         "Invitation to the private TV-ish Creator Discord",
@@ -34,8 +34,7 @@ const FoundersBonus = () => {
       perfectFor:
         "Mid-level creators, filmmakers, or influencers ready to grow their audience and income.",
       includes: [
-        "180 days 0% platform fees",
-        "1 year 90/10 revenue split",
+        "6 months 90/10 revenue split",
         "Free onboarding audit includes content feedback + monetization setup guidance",
         "$100 TV-ish ad credit for promoting your channel or videos",
         "Exclusive referral code (earn 5% from referrals for 1 year)",

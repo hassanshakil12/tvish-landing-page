@@ -33,7 +33,7 @@ const About = () => {
         </h1>
         <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-10"></div>
         <p className="text-2xl sm:text-3xl lg:text-4xl text-blue-200 font-bold leading-relaxed from-blue-400 to-blue-600 bg-clip-text italic">
-          "We built Tv-ish for creators — Not corporations."
+          "We built TV-ish for creators — Not corporations."
         </p>
       </div>
 

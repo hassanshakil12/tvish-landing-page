@@ -307,7 +307,7 @@ const Signup = () => {
                       htmlFor="email"
                       className="text-white font-semibold text-lg mb-3 flex items-center space-x-2"
                     >
-                      <span>Professional Email:</span>
+                      <span>Email:</span>
                     </label>
                     <div className="relative">
                       <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-blue-400 rounded-2xl blur opacity-0 group-hover/input:opacity-30 transition-opacity duration-300 -z-10"></div>
