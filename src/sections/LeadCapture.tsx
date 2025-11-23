@@ -27,7 +27,7 @@ const LeadCapture = () => {
                 </span>
                 , exclusive exposure, and{" "}
                 <span className="text-blue-600 font-bold italic">
-                  0% platform fees at launch
+                  increased monetization revenue
                 </span>
                 .
               </p>

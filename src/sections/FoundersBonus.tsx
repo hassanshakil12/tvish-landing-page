@@ -1,8 +1,12 @@
 import type { MouseEvent } from "react";
+import { useState, useEffect } from "react";
 
 const FoundersBonus = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
   const packages = [
     {
+      title: "Bronze",
       tier: "🥉 Bronze Founder",
       subtitle: "The Early Adopter",
       limit: "(For the first 1,000 creators)",
@@ -13,7 +17,7 @@ const FoundersBonus = () => {
         "90 days, 90/10 revenue split",
         "Priority listing in the 'New Creator' section on launch week",
         "Access to advanced analytics dashboard (early beta)",
-        "Invitation to the private TV-ish Creator Discord",
+        "Invitation to the private TV-ish Chat Room",
         "Name featured on the official 'Founders Wall' landing page",
       ],
       value: "~$350",
@@ -28,6 +32,7 @@ const FoundersBonus = () => {
       },
     },
     {
+      title: "Silver",
       tier: "🥈 Silver Founder",
       subtitle: "The Builder",
       limit: "(For top 500 verified creators)",
@@ -36,8 +41,8 @@ const FoundersBonus = () => {
       includes: [
         "6 months 90/10 revenue split",
         "Free onboarding audit includes content feedback + monetization setup guidance",
-        "$100 TV-ish ad credit for promoting your channel or videos",
-        "Exclusive referral code (earn 5% from referrals for 1 year)",
+        "$150 TV-ish ad credit for promoting your channel or videos",
+        "Exclusive referral code",
         "Invite to Founders Launch Event (virtual or in-person)",
       ],
       requirements:
@@ -52,6 +57,7 @@ const FoundersBonus = () => {
       },
     },
     {
+      title: "Gold",
       tier: "🥇 Gold Founder",
       subtitle: "The Visionary",
       limit: "(Invite-Only: 100 creators maximum)",
@@ -62,8 +68,7 @@ const FoundersBonus = () => {
         "Dedicated Partner Manager for brand deals & collaboration opportunities",
         "Free feature in the 'Founder Spotlight' series",
         "Co-creator opportunities – early access to beta tools, new features, and creator investment options",
-        "Exclusive NFT Founder Certificate verifying your role as a platform pioneer",
-        "Access to private 'Founders Summit' (annual retreat)",
+        "Access to private 'Founders Summit'",
         "Complimentary TV-ish Merchandise Kit",
       ],
       value: "$2,000+",
@@ -81,24 +86,47 @@ const FoundersBonus = () => {
     "💡 Beta Tester Role: Help shape future features & earn rewards for bug reports or feedback",
   ];
 
-  // Smooth scroll function for Bronze package
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const mobile = window.innerWidth < 1280;
+      setIsMobile(mobile);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  // Smooth scroll function for Bronze package - works for all screen sizes
   const handleBronzeRedirect = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const target = document.querySelector("#signup");
-    if (target) {
-      target.scrollIntoView({
+
+    const targetId = isMobile ? "signup-mobile" : "signup";
+    const element = document.getElementById(targetId);
+
+    if (element) {
+      element.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
 
       setTimeout(() => {
-        target.setAttribute("tabindex", "-1");
-        (target as HTMLElement).focus();
-        target.removeAttribute("tabindex");
+        element.setAttribute("tabindex", "-1");
+        element.focus();
+        element.removeAttribute("tabindex");
       }, 1000);
+    } else {
+      // Fallback to original href if mobile target not found
+      const fallbackElement = document.getElementById("signup");
+      if (fallbackElement) {
+        fallbackElement.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     }
   };
 
+  // ... rest of your existing code (handleSilverButtonClick, handleGoldInterest, etc.) remains the same
   // Function to handle Silver button click
   const handleSilverButtonClick = () => {
     // Create and show login popup
@@ -354,7 +382,14 @@ const FoundersBonus = () => {
 
               {/* Includes */}
               <div className="space-y-4 mb-6 grow">
-                <h3 className="text-xl font-bold text-white mb-3">Includes:</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Includes{" "}
+                  {pkg.title === "Gold"
+                    ? "Silver+"
+                    : pkg.title === "Silver"
+                    ? "Bronze+"
+                    : ""}
+                </h3>
                 <ul className="space-y-3">
                   {pkg.includes.map((item, itemIndex) => (
                     <li

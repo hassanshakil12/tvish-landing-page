@@ -1,5 +1,3 @@
-import { Button } from "./";
-
 const HeroBackground = () => {
   const posters = [
     "/img/poster_02.jpg",
@@ -151,10 +149,7 @@ const HeroBackground = () => {
             gatekeepers.
           </p>
 
-          {/* CTA Button */}
-          <div className="transform scale-75 xs:scale-90 sm:scale-100">
-            <Button name="Claim Your Founder Spot" />
-          </div>
+          <br className="md:hidden block" />
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import {
   Signup,
   Footer,
 } from "./sections";
-import { ScrollToTopButton, ActionButton } from "./components";
+import { ScrollToTopButton, FloatingCTA } from "./components";
 
 const App = () => {
   useEffect(() => {
@@ -23,7 +23,8 @@ const App = () => {
     <>
       <div className="w-full h-full bg-black selection:bg-blue-600/30">
         <ScrollToTopButton />
-        <ActionButton name="Sign up now" />
+        {/* <ActionButton name="Sign up now" /> */}
+        <FloatingCTA name="Claim Your Founder Spot" />
         <HeroSection />
         <About />
         <LeadCapture />
