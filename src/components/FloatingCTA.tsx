@@ -105,13 +105,36 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
         ></div>
 
         {/* Button Content */}
-        <div className="relative bg-linear-to-br from-blue-700 via-blue-600 to-blue-800 px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-3 rounded-lg sm:rounded-xl shadow-xl sm:shadow-2xl border-2 border-blue-400/50 group-hover:border-blue-300 group-hover:from-blue-600 group-hover:to-blue-700 group-hover:scale-105 active:scale-95 transition-all duration-300">
+        {/* <div className="relative bg-linear-to-br from-blue-700 via-blue-600 to-blue-800 px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-3 rounded-lg sm:rounded-xl shadow-xl sm:shadow-2xl border-2 border-blue-400/50 group-hover:border-blue-300 group-hover:from-blue-600 group-hover:to-blue-700 group-hover:scale-105 active:scale-95 transition-all duration-300">
           <span className="flex items-center justify-center space-x-2 sm:space-x-3">
             <span className="text-sm sm:text-base bg-linear-to-r from-white to-blue-100 bg-clip-text text-transparent whitespace-nowrap">
               {name}
             </span>
             <svg
               className={`w-4 h-4 sm:w-5 sm:h-5 transform transition-transform duration-300 ${
+                isScrolled ? "translate-x-0" : "group-hover:translate-x-1"
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </span>
+        </div> */}
+
+        <div className="relative bg-white px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-3 rounded-lg sm:rounded-xl shadow-xl sm:shadow-2xl border-2 border-gray-200 group-hover:border-gray-300 group-hover:bg-gray-50 group-hover:scale-105 active:scale-95 transition-all duration-300">
+          <span className="flex items-center justify-center space-x-2 sm:space-x-3">
+            <span className="text-sm sm:text-base text-black font-semibold whitespace-nowrap">
+              {name}
+            </span>
+            <svg
+              className={`w-4 h-4 sm:w-5 sm:h-5 transform transition-transform duration-300 invert-100 ${
                 isScrolled ? "translate-x-0" : "group-hover:translate-x-1"
               }`}
               fill="none"
