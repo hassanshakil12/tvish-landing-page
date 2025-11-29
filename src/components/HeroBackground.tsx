@@ -119,17 +119,17 @@ const HeroBackground = () => {
       </div>
 
       {/* Gradient Overlay with Content */}
-      <div className="absolute inset-0 bg-linear-to-t from-black via-black/90 to-transparent flex items-end pb-8 sm:pb-12 md:pb-16 lg:pb-20 backdrop-blur-[5px]">
+      <div className="absolute inset-0 bg-linear-to-t from-black via-black/85 to-transparent flex items-end pb-8 sm:pb-12 md:pb-16 lg:pb-20 backdrop-blur-[3px]">
         <div className="text-center px-4 w-full max-w-6xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-5 md:mb-6 text-white tracking-tight leading-tight">
-            The <span className="text-blue-600 italic">Revolution</span> in
+            The <span className="text-secondary-blue italic filter-[drop-shadow(rgba(50,50,50,0.8)_0px_0px_10px)_drop-shadow(rgba(30,30,30,0.5)_0px_0px_20px)_drop-shadow(rgba(10,10,10,0.3)_0px_0px_30px)]">Revolution</span> in
             Streaming
             <br className="hidden sm:block" /> is Coming.
           </h1>
 
           {/* Sub Headline */}
-          <blockquote className="text-2xl sm:text-3xl lg:text-4xl text-blue-200 font-bold mb-4 sm:mb-5 md:mb-6 leading-relaxed from-blue-400 to-blue-600 bg-clip-text italic">
+          <blockquote className="text-2xl sm:text-3xl lg:text-4xl text-secondary-blue font-bold mb-4 sm:mb-5 md:mb-6 leading-relaxed italic">
             "Be the First to Create. <br className="hidden xs:block" />
             Get Paid from Day One."
           </blockquote>

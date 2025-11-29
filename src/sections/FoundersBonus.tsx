@@ -327,9 +327,9 @@ const FoundersBonus = () => {
             alt="TV-ish"
             className="inline-block h-[1.5em] align-middle mx-1 lg:-mt-10.75 md:-mt-7 sm:-mt-7 -mt-6 lg:-mr-5 md:-mr-3 sm:-mr-2 -mr-1 lg:-ml-6 md:-ml-4 sm:-ml-3 -ml-2"
           />{" "}
-          <span className="text-blue-600 italic">Founder</span> Packages
+          <span className="text-secondary-blue italic">Founder</span> Packages
         </h1>
-        <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-secondary-blue mx-auto rounded-full mb-6"></div>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
           Exclusive benefits for our founding creators. Choose your path and
           grow with us.
@@ -367,7 +367,7 @@ const FoundersBonus = () => {
                 <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-2 leading-tight">
                   {pkg.tier}
                 </h2>
-                <p className="text-xl lg:text-2xl text-blue-400 font-semibold mb-2">
+                <p className="text-xl lg:text-2xl text-secondary-blue font-semibold mb-2">
                   {pkg.subtitle}
                 </p>
                 <p className="text-sm text-gray-400 mb-4">{pkg.limit}</p>
@@ -548,7 +548,7 @@ const FoundersBonus = () => {
 
       {/* Bottom Decoration */}
       <div className="w-full flex justify-center mt-12 lg:mt-16">
-        <div className="w-32 h-1 bg-linear-to-r from-transparent via-blue-600 to-transparent rounded-full"></div>
+        <div className="w-32 h-1 bg-linear-to-r from-transparent via-secondary-blue to-transparent rounded-full"></div>
       </div>
 
       {/* Add CSS for smooth animations */}

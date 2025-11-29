@@ -29,10 +29,10 @@ const About = () => {
             alt="TV-ish"
             className="inline-block h-[1.5em] align-middle mx-1 lg:-mt-10.75 md:-mt-7 sm:-mt-7 -mt-6 lg:-mr-5 md:-mr-3 sm:-mr-2 -mr-1 lg:-ml-6 md:-ml-4 sm:-ml-3 -ml-2"
           />{" "}
-          <span className="text-blue-600 italic">Different?</span>
+          <span className="text-secondary-blue italic">Different?</span>
         </h1>
-        <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-10"></div>
-        <p className="text-2xl sm:text-3xl lg:text-4xl text-blue-200 font-bold leading-relaxed from-blue-400 to-blue-600 bg-clip-text italic">
+        <div className="w-24 h-1 bg-secondary-blue mx-auto rounded-full mb-10"></div>
+        <p className="text-2xl sm:text-3xl lg:text-4xl text-secondary-blue font-bold leading-relaxed italic">
           "We built TV-ish for creators — Not corporations."
         </p>
       </div>
@@ -44,7 +44,7 @@ const About = () => {
           <div className="text-center">
             <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto ">
               You keep more of your{" "}
-              <span className="text-blue-600 font-bold italic">revenue</span>,
+              <span className="text-secondary-blue font-bold italic">revenue</span>,
               own your{" "}
               <span className="text-white font-bold italic">
                 rights, and connect
@@ -80,7 +80,7 @@ const About = () => {
 
       {/* Bottom Decoration */}
       <div className="w-full flex justify-center mt-16 lg:mt-24">
-        <div className="w-32 h-1 bg-linear-to-r from-transparent via-blue-600 to-transparent rounded-full"></div>
+        <div className="w-32 h-1 bg-linear-to-r from-transparent via-secondary-blue to-transparent rounded-full"></div>
       </div>
     </div>
   );

@@ -34,9 +34,9 @@ const WhyJoinNow = () => {
       {/* Header Section */}
       <div className="w-full text-center mb-16 lg:mb-10">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
-          Why Join <span className="text-blue-600 italic">Before</span> Launch?
+          Why Join <span className="text-secondary-blue italic">Before</span> Launch?
         </h1>
-        <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-10"></div>
+        <div className="w-24 h-1 bg-secondary-blue mx-auto rounded-full mb-10"></div>
       </div>
 
       {/* Benefits Grid */}
@@ -74,7 +74,7 @@ const WhyJoinNow = () => {
 
       {/* Bottom Decoration */}
       <div className="w-full flex justify-center mt-16 lg:mt-24">
-        <div className="w-32 h-1 bg-linear-to-r from-transparent via-blue-600 to-transparent rounded-full"></div>
+        <div className="w-32 h-1 bg-linear-to-r from-transparent via-secondary-blue to-transparent rounded-full"></div>
       </div>
     </div>
   );

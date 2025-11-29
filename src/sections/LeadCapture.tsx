@@ -6,10 +6,10 @@ const LeadCapture = () => {
       {/* Header Section */}
       <div className="w-full text-center mb-16 lg:mb-10">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">
-          The <span className="text-blue-600 italic">Founders</span> Program
+          The <span className="text-secondary-blue italic">Founders</span> Program
         </h1>
-        <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-10"></div>
-        <p className="text-2xl sm:text-3xl lg:text-4xl text-blue-200 font-bold leading-relaxed from-blue-400 to-blue-600 bg-clip-text italic">
+        <div className="w-24 h-1 bg-secondary-blue mx-auto rounded-full mb-10"></div>
+        <p className="text-2xl sm:text-3xl lg:text-4xl text-secondary-blue font-bold leading-relaxed italic">
           "Only 1,000 Founders Will Shape the Future."
         </p>
       </div>
@@ -22,11 +22,11 @@ const LeadCapture = () => {
             <div className="space-y-6">
               <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed">
                 Join the Founders Program and lock in{" "}
-                <span className="text-white font-bold italic">
+                <span className="text-secondary-blue font-bold italic">
                   1 year perks
                 </span>
                 , exclusive exposure, and{" "}
-                <span className="text-blue-600 font-bold italic">
+                <span className="text-secondary-blue font-bold italic">
                   increased monetization revenue
                 </span>
                 .
@@ -66,7 +66,7 @@ const LeadCapture = () => {
 
       {/* Bottom Decoration */}
       <div className="w-full flex justify-center mt-16 lg:mt-24">
-        <div className="w-32 h-1 bg-linear-to-r from-transparent via-blue-600 to-transparent rounded-full"></div>
+        <div className="w-32 h-1 bg-linear-to-r from-transparent via-secondary-blue to-transparent rounded-full"></div>
       </div>
     </div>
   );

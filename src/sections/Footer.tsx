@@ -10,24 +10,24 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></div>
                 <h3 className="text-5xl font-bold text-white">
-                  Our <span className="text-blue-600 italic">Philosophy</span>
+                  Our <span className="text-secondary-blue italic">Philosophy</span>
                 </h3>
               </div>
 
               <div className="bg-black/40 border-l-4 border-blue-600 rounded-r-xl p-6">
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4">
                   TV-ish is built on{" "}
-                  <span className="text-white font-bold italic">
+                  <span className="text-secondary-blue font-bold italic">
                     creative freedom, empowerment, excellence,
                   </span>{" "}
                   and{" "}
-                  <span className="text-white font-bold italic">
+                  <span className="text-secondary-blue font-bold italic">
                     diversity of thought.
                   </span>
                 </p>
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                   We believe in stories that{" "}
-                  <span className="text-blue-600 font-bold italic">
+                  <span className="text-secondary-blue font-bold italic">
                     inspire, connect, and create change.
                   </span>
                 </p>
@@ -77,7 +77,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                 <h3 className="text-5xl font-bold text-white">
-                  Our <span className="text-blue-600 italic">Promise</span>
+                  Our <span className="text-secondary-blue italic">Promise</span>
                 </h3>
               </div>
 
@@ -92,7 +92,7 @@ const Footer = () => {
                   Just Value, No Noise
                 </p>
                 <p className="text-lg text-gray-300 text-center leading-relaxed">
-                  <span className="text-blue-600 font-bold italic">
+                  <span className="text-secondary-blue font-bold italic">
                     No spam. No fluff.
                   </span>{" "}
                   Just meaningful updates about opportunities that matter to
@@ -141,7 +141,7 @@ const Footer = () => {
                     className="inline-block h-[3em] align-middle mx-1 lg:-ml-2 -ml-0.5"
                   />{" "}
                 </h4>
-                <p className="text-gray-400 text-sm">
+                <p className="text-secondary-blue text-sm">
                   Stream bold. Share loud. Be seen
                 </p>
               </div>

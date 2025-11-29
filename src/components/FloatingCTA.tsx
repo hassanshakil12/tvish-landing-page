@@ -46,7 +46,9 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || window.pageYOffset;
-      const heroHeight = window.innerHeight;
+
+      // Move to right immediately on any scroll
+      setIsScrolled(scrollY > 1); // Reduced threshold for immediate movement
 
       // Check if we're in the signup section - use mobile target if on mobile
       const targetId = isMobile ? "signup-mobile" : href.replace("#", "");
@@ -61,16 +63,17 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
 
         // Only remove from DOM after fade out animation completes
         if (isInSignupSection) {
-          setTimeout(() => setShouldRender(false), 500);
+          setTimeout(() => setShouldRender(false), 300);
         } else {
           setShouldRender(true);
         }
       }
-
-      setIsScrolled(scrollY > heroHeight * 0.15);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
+    // Initial check
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [href, isMobile]);
 
@@ -79,14 +82,14 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
   return (
     <button
       onClick={handleClick}
-      className={`group fixed z-50 text-white font-bold cursor-pointer transition-all duration-700 ease-in-out ${
+      className={`group fixed z-50 text-white font-bold cursor-pointer transition-all duration-500 ease-out ${
         isVisible
           ? "opacity-100 scale-100"
           : "opacity-0 scale-95 pointer-events-none"
       } ${
         isScrolled
-          ? "bottom-28 right-4 sm:bottom-6 sm:right-6 md:bottom-28 md:right-8 lg:bottom-28 lg:right-8 translate-x-0"
-          : "bottom-4 left-1/2 transform -translate-x-1/2 sm:bottom-6 md:bottom-8 lg:bottom-12"
+          ? "bottom-28 right-4 sm:bottom-28 sm:right-6 md:bottom-28 md:right-6 lg:bottom-28 lg:right-6 translate-x-0"
+          : "bottom-8 left-1/2 transform -translate-x-1/2"
       }`}
       style={{
         transitionProperty: "transform, opacity, bottom, left, right, scale",
@@ -102,16 +105,14 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
         ></div>
 
         {/* Button Content */}
-        <div className="relative bg-linear-to-br from-blue-700 via-blue-600 to-blue-800 px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-4 rounded-lg sm:rounded-xl shadow-xl sm:shadow-2xl border-2 border-blue-400/50 group-hover:border-blue-300 group-hover:from-blue-600 group-hover:to-blue-700 group-hover:scale-105 active:scale-95 transition-all duration-300">
+        <div className="relative bg-linear-to-br from-blue-700 via-blue-600 to-blue-800 px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-3 rounded-lg sm:rounded-xl shadow-xl sm:shadow-2xl border-2 border-blue-400/50 group-hover:border-blue-300 group-hover:from-blue-600 group-hover:to-blue-700 group-hover:scale-105 active:scale-95 transition-all duration-300">
           <span className="flex items-center justify-center space-x-2 sm:space-x-3">
-            <span className="text-sm sm:text-md md:text-md bg-linear-to-r from-white to-blue-100 bg-clip-text text-transparent whitespace-nowrap">
+            <span className="text-sm sm:text-base bg-linear-to-r from-white to-blue-100 bg-clip-text text-transparent whitespace-nowrap">
               {name}
             </span>
             <svg
-              className={`w-4 h-4 sm:w-5 sm:h-5 transform transition-transform duration-700 ease-in-out ${
-                isScrolled
-                  ? "translate-x-0"
-                  : "group-hover:translate-x-0.5 sm:group-hover:translate-x-1"
+              className={`w-4 h-4 sm:w-5 sm:h-5 transform transition-transform duration-300 ${
+                isScrolled ? "translate-x-0" : "group-hover:translate-x-1"
               }`}
               fill="none"
               stroke="currentColor"
@@ -127,18 +128,18 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
           </span>
         </div>
 
-        {/* Floating Particles - Hidden on mobile for performance */}
+        {/* Floating Particles */}
         <div
-          className={`hidden sm:block absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-2 h-2 sm:w-3 sm:h-3 bg-yellow-400 rounded-full transition-opacity duration-700 ${
+          className={`absolute -top-1 -right-1 sm:-top-1 sm:-right-1 w-2 h-2 bg-yellow-400 rounded-full transition-opacity duration-300 ${
             isVisible
-              ? "group-hover:opacity-100 group-hover:animate-ping"
+              ? "opacity-75 group-hover:opacity-100 group-hover:animate-ping"
               : "opacity-0"
           }`}
         ></div>
         <div
-          className={`hidden sm:block absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full transition-opacity duration-700 delay-300 ${
+          className={`absolute -bottom-1 -left-1 sm:-bottom-1 sm:-left-1 w-1.5 h-1.5 bg-green-400 rounded-full transition-opacity duration-300 delay-150 ${
             isVisible
-              ? "group-hover:opacity-100 group-hover:animate-ping"
+              ? "opacity-75 group-hover:opacity-100 group-hover:animate-ping"
               : "opacity-0"
           }`}
         ></div>
@@ -146,7 +147,7 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
 
       {/* Subtle Glow */}
       <div
-        className={`absolute inset-0 bg-blue-400/20 rounded-lg sm:rounded-xl blur-lg -z-10 transition-all duration-700 ${
+        className={`absolute inset-0 bg-blue-400/20 rounded-lg sm:rounded-xl blur-lg -z-10 transition-all duration-300 ${
           isVisible ? "group-hover:bg-blue-400/30" : "opacity-0"
         }`}
       ></div>
