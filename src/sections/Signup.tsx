@@ -469,7 +469,7 @@ const Signup = () => {
                   <button
                     type="submit"
                     disabled={isButtonDisabled()}
-                    className={`w-full relative overflow-hidden group/btn text-white font-bold py-4 px-8 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-3 text-lg ${
+                    className={`cursor-pointer w-full relative overflow-hidden group/btn text-white font-bold py-4 px-8 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-3 text-lg ${
                       founderCount >= 1000
                         ? "bg-gray-700 hover:bg-gray-700 shadow-gray-500/20 cursor-not-allowed"
                         : "bg-linear-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-600 hover:via-blue-500 hover:to-blue-600 hover:shadow-blue-500/40"
