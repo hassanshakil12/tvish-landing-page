@@ -56,6 +56,36 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
+  // Fade out when #signup or #signup-mobile is in viewport
+  useEffect(() => {
+    const checkVisibility = () => {
+      const signup = document.getElementById("signup");
+      const signupMobile = document.getElementById("signup-mobile");
+
+      const isElementInView = (el: HTMLElement | null) => {
+        if (!el) return false;
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+      };
+
+      const onSignupInView =
+        isElementInView(signup) || isElementInView(signupMobile);
+
+      if (onSignupInView) {
+        // Fade out when signup section visible
+        setIsVisible(false);
+      } else {
+        // Show only when page is scrolled
+        setIsVisible(window.pageYOffset > 10);
+      }
+    };
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Initial check
+
+    return () => window.removeEventListener("scroll", checkVisibility);
+  }, []);
+
   return (
     <button
       onClick={handleClick}
