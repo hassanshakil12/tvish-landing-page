@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
 interface ButtonProps {
-  name: string;
-  href?: string;
+  name: String;
+  href?: String;
 }
 
-const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
-  const [isVisible, setIsVisible] = useState(false);
+const CTAButton = ({ name, href = "#signup" }: ButtonProps) => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -18,6 +18,17 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleClick = () => {
@@ -40,29 +51,11 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
     }
   };
 
-  // Simple scroll visibility logic like ScrollToTopButton
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 10) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-    toggleVisibility(); // Initial check
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-
   return (
     <button
       onClick={handleClick}
-      className={`group fixed z-50 text-white font-bold cursor-pointer transition-all duration-500 ease-out bottom-28 right-4 sm:bottom-28 sm:right-6 md:bottom-28 md:right-6 lg:bottom-28 lg:right-6 ${
-        isVisible
-          ? "opacity-100 scale-100"
-          : "opacity-0 scale-95 pointer-events-none"
+      className={`group fixed left-1/2 transform -translate-x-1/2 z-50 text-white font-bold cursor-pointer transition-all duration-500 ease-out ${
+        isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
       style={{
         transitionProperty: "transform, opacity, bottom, left, right, scale",
@@ -81,7 +74,7 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
               {name}
             </span>
             <svg
-              className={`w-4 h-4 sm:w-5 sm:h-5 transform transition-transform duration-300 invert-100 group-hover:translate-x-1`}
+              className={`w-4 h-4 sm:w-5 sm:h-5 transform transition-transform duration-300 invert-100`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -98,19 +91,19 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
 
         {/* Floating Particles */}
         <div
-          className={`absolute -top-1 -right-1 sm:-top-1 sm:-right-1 w-2 h-2 bg-yellow-400 rounded-full transition-opacity duration-300 opacity-75 group-hover:opacity-100 group-hover:animate-ping`}
+          className={`absolute -top-1 -right-1 sm:-top-1 sm:-right-1 w-2 h-2 bg-yellow-400 rounded-full transition-opacity duration-300`}
         ></div>
         <div
-          className={`absolute -bottom-1 -left-1 sm:-bottom-1 sm:-left-1 w-1.5 h-1.5 bg-green-400 rounded-full transition-opacity duration-300 delay-150 opacity-75 group-hover:opacity-100 group-hover:animate-ping`}
+          className={`absolute -bottom-1 -left-1 sm:-bottom-1 sm:-left-1 w-1.5 h-1.5 bg-green-400 rounded-full transition-opacity duration-300 delay-150`}
         ></div>
       </div>
 
       {/* Subtle Glow */}
       <div
-        className={`absolute inset-0 bg-blue-400/20 rounded-lg sm:rounded-xl blur-lg -z-10 transition-all duration-300 group-hover:bg-blue-400/30`}
+        className={`absolute inset-0 bg-blue-400/20 rounded-lg sm:rounded-xl blur-lg -z-10 transition-all duration-300`}
       ></div>
     </button>
   );
 };
 
-export default FloatingCTA;
+export default CTAButton;

@@ -1,3 +1,5 @@
+import CTAButton from "./CTAButton.tsx";
+
 const HeroBackground = () => {
   const posters = [
     "/img/poster_02.jpg",
@@ -123,17 +125,18 @@ const HeroBackground = () => {
         <div className="text-center px-4 w-full max-w-6xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-5 md:mb-6 text-white tracking-tight leading-tight">
-            The <span className="text-secondary-blue italic filter-[drop-shadow(rgba(50,50,50,0.8)_0px_0px_10px)_drop-shadow(rgba(30,30,30,0.5)_0px_0px_20px)_drop-shadow(rgba(10,10,10,0.3)_0px_0px_30px)]">Revolution</span> in
-            Streaming
+            The{" "}
+            <span className="text-secondary-blue italic filter-[drop-shadow(rgba(50,50,50,0.8)_0px_0px_10px)_drop-shadow(rgba(30,30,30,0.5)_0px_0px_20px)_drop-shadow(rgba(10,10,10,0.3)_0px_0px_30px)]">
+              Revolution
+            </span>{" "}
+            in Streaming
             <br className="hidden sm:block" /> is Coming.
           </h1>
-
           {/* Sub Headline */}
           <blockquote className="text-2xl sm:text-3xl lg:text-4xl text-secondary-blue font-bold mb-4 sm:mb-5 md:mb-6 leading-relaxed italic">
             "Be the First to Create. <br className="hidden xs:block" />
             Get Paid from Day One."
           </blockquote>
-
           {/* Description */}
           <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto mt-8">
             <img
@@ -149,7 +152,10 @@ const HeroBackground = () => {
             gatekeepers.
           </p>
 
-          <br className="md:hidden block" />
+          {/* CTA Button */}
+          <CTAButton name="Claim Your Founder Spot" />
+          <br />
+          <br />
         </div>
       </div>
     </div>

@@ -11,3 +11,4 @@ export { default as SilverPopup } from "./SilverPopup.tsx";
 export { default as GoldInfoPopup } from "./GoldInfoPopup.tsx";
 export { default as PackageCard } from "./PackageCard.tsx";
 export { default as AddOnCard } from "./AddOnCard.tsx";
+export { default as CTAButton } from "./CTAButton.tsx";
