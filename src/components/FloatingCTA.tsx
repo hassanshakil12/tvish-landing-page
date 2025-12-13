@@ -40,23 +40,6 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
     }
   };
 
-  // Simple scroll visibility logic like ScrollToTopButton
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 10) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-    toggleVisibility(); // Initial check
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-
-  // Fade out when #signup or #signup-mobile is in viewport
   useEffect(() => {
     const checkVisibility = () => {
       const signup = document.getElementById("signup");
@@ -72,16 +55,14 @@ const FloatingCTA = ({ name, href = "#signup" }: ButtonProps) => {
         isElementInView(signup) || isElementInView(signupMobile);
 
       if (onSignupInView) {
-        // Fade out when signup section visible
         setIsVisible(false);
       } else {
-        // Show only when page is scrolled
         setIsVisible(window.pageYOffset > 10);
       }
     };
 
     window.addEventListener("scroll", checkVisibility);
-    checkVisibility(); // Initial check
+    checkVisibility();
 
     return () => window.removeEventListener("scroll", checkVisibility);
   }, []);
