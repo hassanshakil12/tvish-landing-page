@@ -5,7 +5,7 @@ import { triggerConfetti } from "../utils/confettiService";
 
 // Define the API base URL
 const API_BASE_URL =
-  import.meta.env.VITE_BASE_URL || "http://localhost:3000/api";
+  import.meta.env.VITE_BASE_URL;
 
 interface TimeLeft {
   days: number;

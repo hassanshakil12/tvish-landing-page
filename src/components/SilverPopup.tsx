@@ -19,7 +19,7 @@ const SilverPopup = ({ isOpen, onClose }: SilverPopupProps) => {
 
   // Get API base URL
   const API_BASE_URL =
-    import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api";
+    import.meta.env.VITE_API_BASE_URL;
 
   // Focus input when popup opens
   useEffect(() => {
